@@ -1,0 +1,162 @@
+html,body{
+    height:100%;
+  }
+  
+  .pip{
+    width:24px;
+    height:24px;
+    border-radius:50%;
+    background-color:#000;
+    display:flex;
+    margin:4px;
+    box-shadow:inset 0 3px #111, inset 0 -3px #555; 
+  }
+  /* 九个点的 */
+  .first-face{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap; 
+  }
+  /* 一个点的 */
+  .second-face{
+    display:flex;
+    justify-content:center;
+   /*  align-items:flex-end; */
+  }
+  /* 两个点横着排的 */
+  .third-face{
+    display:flex;
+    justify-content:space-between;
+  align-items:center;
+    /* align-items:flex-end; */
+  } 
+  /* 两个点竖着排的 */
+  .third1-face{
+    flex-direction:column;
+    display:flex;
+    justify-content:space-between;
+   /* align-items:center; */
+    align-items:flex-end;  
+  }
+  /* 两个点斜着排的 */
+  .third2-face{
+    display:flex;
+    /*  flex-direction:row-reverse; 向另一个方向斜*/
+    justify-content:space-between;
+  }
+  .third2-face .pip:nth-of-type(2){
+    /* align-self:center;  */ 
+    align-self:flex-end;
+  }
+  /* 三个点横着排的 */
+  .fourth-face{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  /* 三个点竖着排的 */
+  .fourth1-face{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    /* align-items:flex-end; */
+  }
+  /* 三个斜竖着排的 */
+  .fourth2-face{
+    display:flex;
+   /*  flex-direction:row-reverse; 向另一个方向斜*/
+    /* justify-content:flex-end; */
+  }
+  .fourth2-face .pip:nth-of-type(2){
+    align-self:center;
+  }
+  .fourth2-face .pip:nth-of-type(3){
+    align-self:flex-end;
+  }
+  /* 四个点横竖排的 */
+  .fifth-face{
+    display:flex;
+    flex-wrap:wrap;
+    /* flex-direction:row-reverse; */
+    flex-direction:column;
+    flex-direction:column-reverse;
+    /* align-content:space-between; */
+    align-content:flex-start;
+  }
+  /* 四个点在角上的 */
+  .fifth1-face{
+    display:flex;
+    justify-content:space-between; 
+  }
+  .fifth1-face .column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  /* 五个点的 */
+  .fifth2-face{
+    display:flex;
+    justify-content:space-between;
+  }
+  .fifth2-face .column{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+  .fifth2-face .column:nth-of-type(2){
+    justify-content:center;
+  }
+  /* 六个点横排的 */
+  .sixth-face{
+    display:flex;
+    flex-wrap:wrap;
+    align-content:space-between;
+    justify-content:space-between;
+  }
+  /* 六个点竖排的 */
+  .sixth1-face{
+    display:flex;
+    justify-content:space-between;
+  }
+  .sixth1-face .column{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+  /* 六个点三一二排的，这个有点问题 */
+  .sixth2-face{
+    display:flex;
+    flex-wrap:wrap;
+  }
+  .sixth2-face .row{
+    flex-basis: 100%;
+    display:flex;  
+    justify-content:space-between; 
+  }
+  .sixth2-face .row:nth-of-child(2){  
+    display:flex;  
+    justify-content:center;
+    /* 这一个为什么不去中间呢 ？*/
+  }
+  .sixth2-face .row:nth-of-child(3){
+     justify-content:space-between;
+  }
+  
+  
+  [class$="face"] {
+    margin: 16px;
+    padding: 4px;
+    
+    background-color: #e7e7e7;
+    width: 104px;
+    height: 104px;
+    object-fit: contain;
+    
+    box-shadow:
+      inset 0 5px white, 
+      inset 0 -5px #bbb,
+      inset 5px 0 #d7d7d7, 
+      inset -5px 0 #d7d7d7; 
+    
+    border-radius: 10%;
+  }
