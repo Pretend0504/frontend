@@ -1,0 +1,105 @@
+.onecol{
+    width:600px;
+    max-width:600px;
+    margin:0 auto;
+    background-color:yellow
+  }
+  .layout{
+    width:600px;
+    text-align:center;
+    margin:0 auto;
+  }
+  .content{
+    width:300px;
+    text-align:center;
+    margin:0 auto;
+  }
+  .left{
+    width:200px;
+    background-color:yellow;
+    float:left;
+  }
+  .right{
+    width:200px;
+    background-color:yellow;
+    float:right;
+  }
+  .center{
+    background-color:green;
+    margin-left:200px;
+    margin-right:200px;
+  }
+  .main{
+    margin-left:200px;
+    background-color:green;
+  }
+  .left1{
+    position: absolute;
+    left:0;
+  /*   top:auto; */
+  /*   top:0; */
+    width:200px;
+    background-color:yellow;
+  }
+  .right1{
+    position:absolute;
+    right:0;
+  /*   top:auto; */
+  /*   top:0;这里为什么不行 */
+    width:200px;
+    background-color:yellow;
+  }
+  .center1{
+    margin:0 200px;
+    background-color:green;
+  }
+  .main1{
+    margin-left:200px;
+    background-color:green; 
+  }
+  .center2{
+    width:100%;
+    float:left;
+    background-color:green;
+  }
+  .left2{
+    width:200px;
+    position:relative;
+    background-color:yellow;
+    float:left;
+    margin-left:-100%;
+    left:-200px;
+  }
+  .right2{
+    width:190px;
+    float:left;
+    position:relative;
+    background-color:yellow;
+    margin-left:-190px;
+    right:-190px;
+  }
+  .shengbei{
+    padding:0 200px 5px 190px;
+  }
+  .main3{
+    margin:0 200px 0 200px ;
+    background-color:green;
+  }
+  .left3{
+    float:left;
+    width:200px;
+    margin-left:-100%;
+    background-color:yellow;
+  }
+  .right3{
+    float:left;
+    width:200px;
+    margin-left:-200px;
+    right:-200px;
+     background-color:yellow;
+  }
+  .main-wrap{
+    width:100%;
+    float:left;
+  }
+  
