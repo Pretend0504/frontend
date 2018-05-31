@@ -1,0 +1,6 @@
+section {
+    min-height: 20em;
+    background-color: lightblue;
+    margin-bottom: 2em;
+    overflow: hidden;
+}
