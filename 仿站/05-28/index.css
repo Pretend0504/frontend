@@ -20,23 +20,27 @@ section {
     max-width: 100%;
     display:flex;
     flex-wrap: nowrap;
-    position: fixed;
+    /* position: fixed;
     top:2em;
-    left:0;
+    left:0; */
    
     /* width:auto; */
 }
 .background-img{
-    background-image:url(../05-28/images/header.jpg);
+    /* background-image:url(../05-28/images/header.jpg); */
 }
 .navbar{
-    width:auto;
+    width:100%;
     /* background-color:transparent; */
     display: flex;
     /* position: fixed; */
-    border-bottom: 1px solid rgba(33, 37, 41, 1);
-    background-color:#fff;
+    /* border-bottom: 1px solid rgba(33, 37, 41, 1); */
+    /* background-color:#fff; */
+   
     transition: all .2s;
+    position: fixed;
+    top:2em;
+    left:0;
 }
 .navbar-brand{
     font-family: monospace;
@@ -65,7 +69,7 @@ a{
     /* white-space: nowrap; 
     word-break:  keep-all;  */
     /* background-color:lightpink; */
-    /* background-image:url(../05-28/images/header.jpg); */
+    background-image:url(../05-28/images/header.jpg);
 }
 .row{
     display:flex;
