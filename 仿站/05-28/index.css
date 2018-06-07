@@ -1,3 +1,14 @@
+@media(min-width:992px){
+    .navebar{
+        background-color: transparent;
+        border-color: transparent;
+    }
+    .collapse{
+        font-size: 1.5em;
+        display: flex!important;
+        margin: 0 5em;
+}
+
 section {
     min-height: 20em;
     background-color: lightblue;
@@ -22,7 +33,9 @@ section {
     /* background-color:transparent; */
     display: flex;
     /* position: fixed; */
-    
+    border-bottom: 1px solid rgba(33, 37, 41, 1);
+    background-color:#fff;
+    transition: all .2s;
 }
 .navbar-brand{
     font-family: monospace;
@@ -30,9 +43,7 @@ section {
     
 }
 .collapse{
-    font-size: 1.5em;
-    display: flex!important;
-    margin: 0 5em;
+    display: none;
    
 }
 .navbar-nav{
