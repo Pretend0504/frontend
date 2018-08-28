@@ -52,7 +52,7 @@ p{
 }
 
 .rowTab{
-  display:flex;
+  /* display:block; */
 }
 .labels{
     display: inline-block;
