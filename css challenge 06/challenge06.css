@@ -1,0 +1,151 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,300);
+
+.container{
+  position:absolute;
+  width:400px;
+  height:400px;
+  background:#FA7373;
+  top:50%;
+  left:50%;
+  transform:translate(-200px,-200px);
+  border-radius:2px;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+  background: #CA7C4E;
+  background: -webkit-linear-gradient(bottom left, #EEBE6C 0%, #CA7C4E 100%);
+  font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+.box{
+  width:300px;
+  height:270px;
+  background:#fff;
+  position:relative;
+  top:65px;
+  left:50px;
+  z-index:2;
+  border-radius:2px;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+}
+.right{
+  width:120px;
+  height:100%;
+/*   background:#FA7373; */
+  position:relative;
+  left:180px;
+}
+.top,.middle,.bottom{
+  width:100%;
+  height:89px;
+  background: #F5E8DF;
+/*   display:flex; */
+  flex-wrap:wrap;
+  box-sizing:border-box;
+  text-align:center;
+}
+.top,.middle{
+  margin-bottom:1px;
+}
+#box:hover{
+  	background: #E1CFC2;
+		cursor: pointer;
+}
+.num{
+  color:#786450;
+  font-size:20px;
+  font-weight:600;
+  padding:23px 0px 0px 0px;
+}
+.content{
+  font-size:10px;
+}
+span{
+  display:block;
+}
+
+img{
+  width:70px;
+  height:70px;
+  position:absolute;
+  top:35px;
+  left:55px;
+  border-radius:50%;
+  display:flex;
+}
+.circle2{
+    box-sizing: border-box;
+    position: absolute;
+	box-sizing: border-box;
+	width: 80px;
+	height: 80px;
+	top: 30px;
+	left: 50px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #786450 #786450 #786450 transparent;
+	border-radius: 50%;
+	transition: all 1.5s ease-in-out;
+}
+.circle1{
+    box-sizing: border-box;
+    position: absolute;
+    box-sizing: border-box;
+	width: 90px;
+	height: 90px;
+	top: 25px;
+	left: 45px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #786450 transparent #786450 #786450;
+	border-radius: 50%;
+	transition: all 1.5s ease-in-out;
+}
+.image:hover{
+  cursor:pointer;
+}
+.circle1:hover{
+  transform:rotate(360deg);
+}
+.circle2:hover{
+  transform:rotate(360deg);
+}
+.name{
+  position:absolute;
+  top:120px;
+  left:45px;
+  font-size:14px;
+  font-weight:600;
+  color:#786450;
+}
+.job{
+  position:absolute;
+  top:140px;
+  left:60px;
+  font-size:11px;
+  color:#786540;
+}
+.actions{
+  position:absolute;
+  display:block;
+}
+.btn1,.btn2{
+  position:absolute;
+  font-size:15px;
+  background:none;
+  width:105px;
+  height:28px;
+  border-radius:20px;
+  border: 1px solid #786540;
+  transition: all .3s ease-in-out;
+}
+.btn1{
+  top:180px;
+  left:38px;
+}
+.btn2{
+  top:220px;
+  left:38px;
+}
+button:hover{
+  background:#786540;
+  color:#fff;
+}
