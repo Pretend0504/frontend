@@ -1,0 +1,121 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400,300,300italic);
+.container{
+  position:absolute;
+  width:400px;
+  height:400px;
+  top:50%;
+  left:50%;
+  margin-top:-200px;
+  margin-left:-200px;
+  background:#4CB6DE;
+  box-shadow:1px 2px 10px 0px rgba(0,0,0,0.3);
+  border-radius:2px;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-smoothing:antialiased;
+}
+
+.content{
+  position:relative;
+  width:330px;
+  height:200px;
+/*   background:#fff; */
+  top:100px;
+  left:35px;
+}
+.content:before{
+  display: block;
+		position: absolute;
+		z-index: 0;
+		content: '”';
+		font-family: Arial;
+		font-size: 250px;
+		color: #6AC2E3;
+		line-height: 35px;
+		top: 15px;
+		left: -35px;
+}
+.words{
+  position:relative;
+  width:100%;
+  height:100%;
+  font-size:23px;
+  font-weight:500;
+  color:#fff;
+  z-index:1;
+  top:-40px;
+}
+.word{
+  display:inline-block;
+  background: #286F8A;
+  padding:0px 5px 3px 5px;
+  cursor: pointer;
+}
+.author{
+  position:relative;
+  color:#fff;
+  font-size:22px;
+  font-style:italic;
+  top:-35px;
+}
+.word:hover{
+  .info{
+    visibility:visible;
+  //   box-sizing:border-box;
+  // display:block;
+  // width:300px;
+  // height:120px;
+  // background:#286F8A;
+  // font-size:18px;
+  // position:absolute;
+  // top:-70px;
+  // left:10px;
+  // z-index:3;
+    opacity:1;
+  transition: all .5s ease-out;
+  transform: translate3d(0,0,0);
+  }
+}
+.info{
+  visibility:hidden;
+  box-sizing:border-box;
+  border-radius:2px;
+  display:block;
+  width:300px;
+  height:120px;
+  font-size:18px;
+  position:absolute;
+  top:-65px;
+  left:10px;
+  z-index:3;
+  opacity:0;
+  transform: translate3d(0,-20px,0);
+  transition: all .5s ease-out;
+  // margin-left:10px;
+}
+.info:after{
+  position: absolute;
+	 content: '';
+	 width: 10px;
+	 height: 10px;
+	 transform: rotate(45deg);
+  top:110px;
+	 left: 50%;
+	 margin-left: -5px;
+	 background: #286F8A;
+}
+.pronounce,.text{
+  width:285px;
+  line-height:35px;
+  background:#fff;
+  display:block;
+  color:#286F8A;
+  padding:0px 0px 0px 15px;
+}
+.text{
+  background:#286F8A;
+  color:#fff;
+  line-height:20px;
+  font-size:16px;
+  font-weight:400;
+  padding:10px 0px 10px 15px;
+}
