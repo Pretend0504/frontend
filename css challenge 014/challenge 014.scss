@@ -1,0 +1,142 @@
+.container{
+    position:absolute;
+    width:400px;
+    height:400px;
+    top:50%;
+    left:50%;
+    margin-top:-200px;
+    margin-left:-200px;
+    background:#4B4841;
+    border-radius:2px;
+    box-shadow:1px 2px 10px 0px rgba(0,0,0,0.3);
+    /* -webkit-font-smoothing: antialiased; */
+  }
+  .box{
+    position:absolute;
+    width:300px;
+    height:180px;
+    top:100px;
+    left:50px;
+    border-radius:2px;
+    perspective:800px;
+    &:hover .flip{
+      transform:rotateX(180deg) translate3d(0,0,0);
+      box-shadow: 8px -10px 15px 0 rgba(0,0,0,0.5);
+    }
+    .flip{
+    width:100%;
+    height:100%;
+    transform-style: preserve-3d;
+          transition: all 1s ease-in-out;
+          perspective: 1000px;
+          box-shadow: 8px 10px 15px 0 rgba(0,0,0,0.5);
+    }
+    .front,.back{
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      background:#FFCE4E;
+      backface-visibility:hidden;
+      border-radius:2px;
+      overflow:hidden;
+      text-align:center;
+    }
+    .front{
+      z-index:2;
+      transform:rotateX(0deg);
+      img{
+      position:relative;
+      margin-top:50px;
+      animation:bike .6s ease-in-out infinite;
+      transform-origin: 50% 100%;
+      }
+      .street{
+        position:absolute;
+        margin-top:-4px;
+        width:160px;
+        height:3px;
+        left:70px;
+        overflow:hidden;
+        // background:red;
+        @for $i from 1 through 9  {
+          .street-#{$i} {
+            position:absolute;
+            top:0;
+            right:-50px;
+            border-radius:3px;
+            width:(2 + $i * 2) + px;
+            height:3px;
+            background:#4B4841;
+            animation: street (0.8 + random(2) / 10) + s linear (random(10) / 10) + s infinite;
+          }
+        }
+      }
+      
+    }
+    .back{
+      transform:rotateX(180deg);
+      img{
+        position:relative;
+        margin-top:50px;
+        animation:plane 1.5s ease-in-out infinite;
+        // animation-fill-mode:both;
+      }
+      .sky{
+        position:absolute;
+        width:160px;
+        height:120px;
+        // background:red;
+        top:30px;
+        left:60px;
+        @for $j from 1 through 9 {
+          .cloud-#{$j}{
+            position:absolute;
+            width:(10 + random(150) / 10) + px;
+            height:3px;
+            border-radius:3px;
+            top:(-10 + $j * 14) + px;
+            right:-50px;
+            // margin-top:($j * 12) + px;
+            background:#4B4841;
+            animation:sky (0.8 + random(2) / 10) + s linear (random(10) / 10) + s infinite;
+          }
+        }
+      }
+    }    
+  }
+  
+  
+  @keyframes bike{
+    0%,100%{
+      transform:scaleY(1);
+    }
+    50%{
+      transform:scaleY(1.05);
+    }
+  }
+  @keyframes plane{
+    0%, 100% {
+          transform: translate3d(0,-5px,0);
+      }
+      50% {
+          transform: translate3d(0,5px,0);
+      }
+  }
+  @keyframes street{
+    0% {
+          transform: translate3d(0, 0, 0) scaleX(1);
+      }
+      100% {
+          transform: translate3d(-210px,0,0) scaleX(.8);
+      }
+  }
+  @keyframes sky{
+    0% {
+          transform: translate3d(0, 0, 0) scaleX(1);
+      }
+      100% {
+          transform: translate3d(-210px,0,0) scaleX(.8);
+      }
+  }
