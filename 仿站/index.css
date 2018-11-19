@@ -53,7 +53,7 @@ a{
     width:auto;
     margin:0 auto;
     padding:3em 0;
-    background-image:url(../05-28/images/header.jpg);
+    background-image:url(./images/header.jpg);
 }
 .row{
     display:flex;
@@ -103,7 +103,7 @@ p{
    
     font-weight: 700;
     text-transform: uppercase;
-    border: none;
+    border: none!important;
     border-radius: 300px;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     margin:5em auto;
@@ -118,11 +118,11 @@ p{
 }
 .btn-2{
     background-color:lightgoldenrodyellow;
-    color:black;
+    color:black!important;
 }
 .btn-3{
     background-color:white;
-    color:black;
+    color:black!important;
 }
 a{
     /* display:flex; */
