@@ -1,0 +1,30 @@
+
+#my-slider{
+    position: relative;
+    height: 340px;
+   }
+  img{
+    width:450px;
+    height:350px;
+  }
+  
+  .slider-list ul{
+    list-style-type:none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .slider-list__item,
+  .slider-list__item--selected{
+    position: absolute;
+   transition: opacity 1s;
+    opacity: 0;
+  }
+  
+  .slider-list__item--selected{
+    transition: opacity 1s;
+    opacity: 1;
+  }
