@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>小程序</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/my/main.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/my/hover-style.css"/>
+	</head>
+
+	<body>
+		<!--侧滑菜单容器-->
+		<div id="offCanvasWrapper" class="mui-off-canvas-wrap">
+			<!--菜单部分-->
+			<aside id="offCanvasSide" class="mui-off-canvas-right l_nav">
+				<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+					
+					<div class="_main_right_nav">
+						<div class="_nav_logo_right">
+							<img src="../img/logo.png" alt="">
+						</div>
+					</div>
+					<!-- 右边导航 -->
+					<div class="mui-scroll">
+						
+						<!-- <div class="mui-table-view l_nav_view"> -->
+							<div class="mui-table-view-cell mui-collapse l_nav_content">
+								<a class="mui-navigate-right" href="#">关于</a>
+								<ul class="mui-collapse-content l_nav_detail">
+									<li><a href="">公司简介</a></li>
+									<li><a href="">联系方式</a></li>
+								</ul>
+							</div>	
+							
+						<!-- </div> -->
+							<div class="mui-table-view-cell mui-collapse l_nav_content">
+								<a class="mui-navigate-right" href="#">服务</a>
+								<ul class="mui-collapse-content l_nav_detail">
+									<li><a href="">PC+移动端</a></li>
+									<li><a href="">外贸网站</a></li>
+									<li><a href="">电商网站</a></li>
+									<li><a href="">微信小程序</a></li>
+									<li><a href="">APP开发</a></li>
+									<li><a href="">企业邮箱</a></li>
+								</ul>
+							</div>	
+							
+							<div class="mui-table-view-cell mui-collapse l_nav_content">
+								<a class="mui-navigate-right" href="#">推广</a>
+								<ul class="mui-collapse-content l_nav_detail">
+									<li><a href="">国内推广——米推云</a></li>
+									<li><a href="">Google AdWords</a></li>
+								</ul>
+							</div>	
+							
+							<div class="mui-table-view-cell mui-collapse l_nav_content">
+								<a class="mui-navigate-right" href="#">经典案例</a>
+								<ul class="mui-collapse-content l_nav_detail">
+									<li><a href="">网站案例</a></li>
+									<li><a href="">小程序案例</a></li>
+								</ul>
+							</div>	
+							
+							<div class="mui-table-view-cell mui-collapse l_nav_content">
+								<a class="mui-navigate-right" href="#">新闻</a>
+								<ul class="mui-collapse-content l_nav_detail">
+									<li><a href="">公司动态</a></li>
+									<li><a href="">行业新闻</a></li>
+								</ul>
+							</div>	
+							
+							<div class="mui-table-view-cell mui-collapse l_nav_content">
+								<a class="mui-navigate-right" href="#">联系我们</a>
+								<!-- <ul class="mui-collapse-content l_nav_detail">
+									<li><a href="">公司动态</a></li>
+									<li><a href="">行业新闻</a></li>
+								</ul> -->
+							</div>	
+							
+					</div>
+				</div>
+			</aside>
+			<div class="mui-inner-wrap">
+				<!-- 主页头部 -->
+				<header class="mui-bar mui-bar-nav l_main_nav">				
+					<div class="_main_nav">
+						<div class="_nav_logo">
+							<img src="../img/logo.png" alt="">
+						</div>
+					</div>
+					<a id="offCanvasBtn" href="#offCanvasSide" class="mui-icon mui-action-menu mui-icon-bars mui-pull-right"></a>
+				</header>
+				<!-- 主要内容 -->
+				<div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper l_main">
+					
+					<div class="_wechat">
+						<div class="l_banner">
+							<img src="" alt="">
+						</div>
+						<div class="_we_top">
+							<h4>正米科技能帮助做什么？</h4>
+							<p>正米网络有专业的程序开发团队，十年的网络营销经验，推出一款适合于各个大小企业的小程序。</p>
+							<p>例如：在线订购、企业宣传、酒店住房、餐厅点餐、旅行社系统等，统统都能实现客户的需求，非常实用的小程序。</p>
+						</div>
+						<div class="_we_case">
+							<div class="_we_case_title">
+								<p>
+									经典案例
+									<span>（具体功能请使用微信扫描案例查看！）</span>
+								</p>
+							</div>
+							<div class="_we_case_img">
+								<img src="../images/yuantiao.jpg" data-preview-src="" data-preview-group="1" />
+								<img src="../images/muwu.jpg" data-preview-src="" data-preview-group="1" class="l_nomargin"/>
+								<img src="../images/shuijiao.jpg" data-preview-src="" data-preview-group="1" />
+								<img src="../images/shuijiao.jpg" data-preview-src="" data-preview-group="1" class="l_nomargin"/>
+								
+							</div>
+							
+							<div class="clear"></div>
+						</div>
+						
+						<div class="_we_case_more">
+							<div class="_we_more_title">
+								<h4>我们还能做到！</h4>
+							</div>
+							<div class="mui-content">
+								<div class="mui-slider">
+									<div class="mui-slider-group mui-slider-loop">
+										<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一个图文表格) -->
+										<div class="mui-slider-item mui-slider-item-duplicate">
+											<ul class="mui-table-view mui-grid-view">
+												<li class="mui-table-view-cell mui-media mui-col-xs-6">									
+													<img class="mui-media-object" src="../images/cbd.jpg">
+													<div class="mui-media-body">餐厅点餐</div>													
+												</li>
+												<!-- <li class="mui-table-view-cell mui-media mui-col-xs-6">									
+													<img class="mui-media-object" src="../images/yuantiao.jpg">
+													<div class="mui-media-body">静静看这世界</div>								
+												</li> -->
+											</ul>
+										</div>
+										<div class="mui-slider-item">
+											<ul class="mui-table-view mui-grid-view">
+												<li class="mui-table-view-cell mui-media mui-col-xs-6">								
+													<img class="mui-media-object" src="../images/shuijiao.jpg">
+													<div class="mui-media-body">食品生鲜类</div>					
+												</li>
+												<li class="mui-table-view-cell mui-media mui-col-xs-6">				
+													<img class="mui-media-object" src="../images/muwu.jpg">
+													<div class="mui-media-body">服装微店</div>
+												</li>
+											</ul>
+										</div>
+										<div class="mui-slider-item">
+											<ul class="mui-table-view mui-grid-view">
+												<li class="mui-table-view-cell mui-media mui-col-xs-6">	
+													<img class="mui-media-object" src="../images/cbd.jpg">
+													<div class="mui-media-body">母婴美妆</div>								
+												</li>
+												<li class="mui-table-view-cell mui-media mui-col-xs-6">													
+													<img class="mui-media-object" src="../images/yuantiao.jpg">
+													<div class="mui-media-body">生活家居</div>										
+												</li>
+											</ul>
+										</div>
+										<div class="mui-slider-item">
+											<ul class="mui-table-view mui-grid-view">
+												<li class="mui-table-view-cell mui-media mui-col-xs-6">										
+													<img class="mui-media-object" src="../images/shuijiao.jpg">
+													<div class="mui-media-body">超市百货</div>									
+												</li>
+												<li class="mui-table-view-cell mui-media mui-col-xs-6">												
+													<img class="mui-media-object" src="../images/muwu.jpg">
+													<div class="mui-media-body">酒店房产</div>											
+												</li>
+											</ul>
+										</div>
+										<div class="mui-slider-item">
+											<ul class="mui-table-view mui-grid-view">
+												<li class="mui-table-view-cell mui-media mui-col-xs-6">										
+													<img class="mui-media-object" src="../images/cbd.jpg">
+													<div class="mui-media-body">摄影艺术</div>								
+												</li>
+												<li class="mui-table-view-cell mui-media mui-col-xs-6">									
+													<img class="mui-media-object" src="../images/yuantiao.jpg">
+													<div class="mui-media-body">文化旅游</div>									
+												</li>
+											</ul>
+										</div>
+										<div class="mui-slider-item">
+											<ul class="mui-table-view mui-grid-view">
+												<li class="mui-table-view-cell mui-media mui-col-xs-6">										
+													<img class="mui-media-object" src="../images/cbd.jpg">
+													<div class="mui-media-body">餐厅点餐</div>								
+												</li>
+												<!-- <li class="mui-table-view-cell mui-media mui-col-xs-6">									
+													<img class="mui-media-object" src="../images/yuantiao.jpg">
+													<div class="mui-media-body">静静看这世界</div>									
+												</li> -->
+											</ul>
+										</div>
+										<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一个图文表格) -->
+										<div class="mui-slider-item mui-slider-item-duplicate">
+											<ul class="mui-table-view mui-grid-view">
+												<li class="mui-table-view-cell mui-media mui-col-xs-6">											
+													<img class="mui-media-object" src="../images/shuijiao.jpg">
+													<div class="mui-media-body">食品生鲜类</div>									
+												</li>
+												<li class="mui-table-view-cell mui-media mui-col-xs-6">								
+													<img class="mui-media-object" src="../images/muwu.jpg">
+													<div class="mui-media-body">服装微店</div>									
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="mui-slider-indicator" style="position: static;background-color: #fff;">
+										<span class="mui-action mui-action-previous mui-icon mui-icon-back"></span>
+										<div class="mui-number">
+											<span>1</span> / 5
+										</div>
+										<span class="mui-action mui-action-next mui-icon mui-icon-forward"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+	
+					</div>
+					
+
+					<!-- <div style="height: 150vh;"></div> -->
+					
+					<!-- footer -->
+					<div class="footer">
+						
+						<div class="l_footer_img">
+							<img src="../img/qr.png" alt="">
+						</div>
+						<div class="l_footer_message">
+							<h4>烟台正米网络科技有限公司</h4>
+							<ul>
+								<li>地址：烟台市开发区金沙江路11号北京中长兴工业园5号楼401室</li>
+								<li>电话：18953520205</li>
+								<li>邮箱：ligen@zheng-mi.com</li>
+								<li>网址：www.zheng-mi.com</li>
+							</ul>
+						</div>
+					</div>
+
+					
+				</div>
+				<!-- off-canvas backdrop -->
+				<div class="mui-off-canvas-backdrop"></div>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script>
+			mui.init();
+		</script>
+			</body>
+
+</html>

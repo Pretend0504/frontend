@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/my/main.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/my/hover-style.css"/>
+		<!-- 小图标样式 -->
+		<link rel="stylesheet" type="text/css" href="../css/icons-extra.css" />
+		
+		<style>
+			
+			
+			.mui-table-view-cell>a:not(.mui-btn).mui-active{
+				background:none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--侧滑菜单容器-->
+		<div id="offCanvasWrapper" class="mui-off-canvas-wrap">
+			<!--菜单部分-->
+			<aside id="offCanvasSide" class="mui-off-canvas-right l_nav">
+				<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+					
+					<div class="_main_right_nav">
+						<div class="_nav_logo_right">
+							<img src="../img/logo.png" alt="">
+						</div>
+					</div>
+					
+					<div class="mui-scroll">
+						
+						<!-- <div class="mui-table-view l_nav_view"> -->
+							<div class="mui-table-view-cell mui-collapse l_nav_content">
+								<a class="mui-navigate-right" href="#">关于</a>
+								<ul class="mui-collapse-content l_nav_detail">
+									<li><a href="">公司简介</a></li>
+									<li><a href="">联系方式</a></li>
+								</ul>
+							</div>	
+							
+						<!-- </div> -->
+							<div class="mui-table-view-cell mui-collapse l_nav_content">
+								<a class="mui-navigate-right" href="#">服务</a>
+								<ul class="mui-collapse-content l_nav_detail">
+									<li><a href="">PC+移动端</a></li>
+									<li><a href="">外贸网站</a></li>
+									<li><a href="">电商网站</a></li>
+									<li><a href="">微信小程序</a></li>
+									<li><a href="">APP开发</a></li>
+									<li><a href="">企业邮箱</a></li>
+								</ul>
+							</div>	
+							
+							<div class="mui-table-view-cell mui-collapse l_nav_content">
+								<a class="mui-navigate-right" href="#">推广</a>
+								<ul class="mui-collapse-content l_nav_detail">
+									<li><a href="">国内推广——米推云</a></li>
+									<li><a href="">Google AdWords</a></li>
+								</ul>
+							</div>	
+							
+							<div class="mui-table-view-cell mui-collapse l_nav_content">
+								<a class="mui-navigate-right" href="#">案例</a>
+								<ul class="mui-collapse-content l_nav_detail">
+									<li><a href="">网站案例</a></li>
+									<li><a href="">小程序案例</a></li>
+								</ul>
+							</div>	
+							
+							<div class="mui-table-view-cell mui-collapse l_nav_content">
+								<a class="mui-navigate-right" href="#">新闻</a>
+								<ul class="mui-collapse-content l_nav_detail">
+									<li><a href="">公司动态</a></li>
+									<li><a href="">行业新闻</a></li>
+								</ul>
+							</div>	
+							
+					</div>
+				</div>
+			</aside>
+			<div class="mui-inner-wrap">
+				<header class="mui-bar mui-bar-nav l_main_nav">
+										
+					<div class="_main_nav">
+						<div class="_nav_logo">
+							<img src="../img/logo.png" alt="">
+						</div>
+					</div>
+					
+					<a id="offCanvasBtn" href="#offCanvasSide" class="mui-icon mui-action-menu mui-icon-bars mui-pull-right"></a>
+					
+				
+				</header>
+				<div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper l_main">
+					<!-- 轮播 -->
+					<div id="my-slider" class="slider-list">
+						<div id="slider" class="mui-slider" >
+							<div class="mui-slider-group mui-slider-loop">
+								<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+								<div class="mui-slider-item mui-slider-item-duplicate">
+									<a href="#">
+										<img src="../images/yuantiao.jpg">
+									</a>
+								</div>
+								<!-- 第一张 -->
+								<div class="mui-slider-item">
+									<a href="#">
+										<img src="../images/shuijiao.jpg">
+									</a>
+								</div>
+								<!-- 第二张 -->
+								<div class="mui-slider-item">
+									<a href="#">
+										<img src="../images/muwu.jpg">
+									</a>
+								</div>
+								<!-- 第三张 -->
+								<div class="mui-slider-item">
+									<a href="#">
+										<img src="../images/cbd.jpg">
+									</a>
+								</div>
+								
+								<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+								<div class="mui-slider-item mui-slider-item-duplicate">
+									<a href="#">
+										<img src="../images/shuijiao.jpg">
+									</a>
+								</div>
+							</div>
+							<div class="mui-slider-indicator">
+								<div class="mui-indicator mui-active"></div>
+								<div class="mui-indicator"></div>
+								<div class="mui-indicator"></div>
+								<!-- <div class="mui-indicator"></div> -->
+							</div>
+						</div>
+						
+					</div>
+					
+					<!-- 服务 -->
+					<div class="l_service">
+						<div class="l_ser_title">
+							<h4>了解我们的服务</h4>
+							<p>建站、营销、推广、定制</p>
+							<p>专业团队助您轻松实现智能运营</p>
+						</div>
+						<div class="l_ser_content">
+							
+							<!-- 服务一 -->
+							
+							<div class="l_ser_detail l_ser_1">
+								<div class="l_ser_left">
+									<div class="l_ser_name">
+										<p>官网服务</p>
+									</div>
+								</div>
+								<div class="l_ser_right">
+									<a href="">
+										<div class="l_right_detail">
+											<div class="l_right_con">
+												<p>PC+移动端</p>
+												<a href=""><span class="mui-icon-extra mui-icon-extra-arrowrightcricle liu"></span></a>
+											</div>
+										</div>
+									</a>
+									<a href="">
+										<div class="l_right_detail">
+											<div class="l_right_con">
+												<p>外贸网站</p>
+												<a href=""><span class="mui-icon-extra mui-icon-extra-arrowrightcricle liu"></span></a>
+											</div>
+										</div>
+									</a>
+									<a href="">
+										<div class="l_right_detail">
+											<div class="l_right_con">
+												<p>电商网站</p>
+												<a href=""><span class="mui-icon-extra mui-icon-extra-arrowrightcricle liu"></span></a>
+											</div>
+										</div>
+									</a>
+									<a href="">
+										<div class="l_right_detail">
+											<div class="l_right_con">
+												<p>企业邮箱</p>
+												<a href=""><span class="mui-icon-extra mui-icon-extra-arrowrightcricle liu"></span></a>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<!-- 服务二 -->
+							<div class="l_ser_detail l_ser_2">
+								<div class="l_ser_left">
+									<div class="l_ser_name">
+										<p>微信小程序</p>
+									</div>
+								</div>
+								<div class="l_ser_right">
+									<a href="">
+										<div class="l_right_detail">
+											<div class="l_right_con">
+												<p>餐厅点餐</p>
+												<a href=""><span class="mui-icon-extra mui-icon-extra-arrowrightcricle liu"></span></a>
+											</div>
+										</div>
+									</a>
+									<a href="">
+										<div class="l_right_detail">
+											<div class="l_right_con">
+												<p>服装微店</p>
+												<a href=""><span class="mui-icon-extra mui-icon-extra-arrowrightcricle liu"></span></a>
+											</div>
+										</div>
+									</a>
+									<a href="">
+										<div class="l_right_detail">
+											<div class="l_right_con">
+												<p>母婴美妆</p>
+												<a href=""><span class="mui-icon-extra mui-icon-extra-arrowrightcricle liu"></span></a>
+											</div>
+										</div>
+									</a>
+									<a href="">
+										<div class="l_right_detail">
+											<div class="l_right_con">
+												<p>更多</p>
+												<a href=""><span class="mui-icon-extra mui-icon-extra-arrowrightcricle liu"></span></a>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<!-- 服务三 -->
+							<div class="l_ser_detail l_ser_3">
+								<div class="l_ser_left">
+									<div class="l_ser_name">
+										<p><span>SEO</span>推广</p>
+									</div>
+								</div>
+								<div class="l_ser_right">
+									<a href="">
+										<div class="l_right_detail">
+											<div class="l_right_con">
+												<p>国内推广——米推云</p>
+												<a href=""><span class="mui-icon-extra mui-icon-extra-arrowrightcricle liu"></span></a>
+											</div>
+										</div>
+									</a>
+									<a href="">
+										<div class="l_right_detail">
+											<div class="l_right_con">
+												<p>Google精准营销</p>
+												<a href=""><span class="mui-icon-extra mui-icon-extra-arrowrightcricle liu"></span></a>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<!-- 服务四 -->
+							<div class="l_ser_detail l_ser_4">
+								<div class="l_ser_left">
+									<div class="l_ser_name">
+										<p>程序开发</p>
+									</div>
+								</div>
+								<div class="l_ser_right">
+									<a href="">
+										<div class="l_right_detail">
+											<div class="l_right_con">
+												<p>功能定制</p>
+												<a href=""><span class="mui-icon-extra mui-icon-extra-arrowrightcricle liu"></span></a>
+											</div>
+										</div>
+									</a>
+									<a href="">
+										<div class="l_right_detail">
+											<div class="l_right_con">
+												<p>软件开发</p>
+												<a href=""><span class="mui-icon-extra mui-icon-extra-arrowrightcricle liu"></span></a>
+											</div>
+										</div>
+									</a>
+									<a href="">
+										<div class="l_right_detail">
+											<div class="l_right_con">
+												<p>APP开发</p>
+												<a href=""><span class="mui-icon-extra mui-icon-extra-arrowrightcricle liu"></span></a>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							
+							
+							
+							
+						</div>
+		
+						
+					</div>
+					
+			
+					
+				</div>
+				<!-- off-canvas backdrop -->
+				<div class="mui-off-canvas-backdrop"></div>
+			</div>
+		</div>
+		<!-- <script src="../js/mui.js"></script> -->
+		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/my/main.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init({
+				swipeBack:true //启用右滑关闭功能
+			});
+			var slider = mui("#slider");
+			slider.slider({interval: 5000});
+			
+			$("#left-menu").on('tap', function (event) {  
+				mui('.mui-off-canvas-wrap').offCanvas('show');  
+			});  
+			
+			window.onload = function(){  
+				mui('#offCanvasSideScroll').scroll();    
+				mui('#offCanvasContentScroll').scroll();   
+			}  
+			
+			
+		</script>
+		
+		<script type="text/javascript" charset="utf-8">  
+			$("#left-menu").on('tap', function (event) {  
+				mui('.mui-off-canvas-wrap').offCanvas('show');  
+			});  
+			
+			window.onload = function(){  
+				mui('#offCanvasSideScroll').scroll();    
+				mui('#offCanvasContentScroll').scroll();   
+			}  
+		</script> 
+		
+	</body>
+
+</html>

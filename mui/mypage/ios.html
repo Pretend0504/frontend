@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/my/main.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/my/hover-style.css"/>
+	</head>
+
+	<body>
+		<!--侧滑菜单容器-->
+		<div id="offCanvasWrapper" class="mui-off-canvas-wrap">
+			<!--菜单部分-->
+			<aside id="offCanvasSide" class="mui-off-canvas-right l_nav">
+				<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+					
+					<div class="_main_right_nav">
+						<div class="_nav_logo_right">
+							<img src="../img/logo.png" alt="">
+						</div>
+					</div>
+					<!-- 右边导航 -->
+					<div class="mui-scroll">
+						
+						<!-- <div class="mui-table-view l_nav_view"> -->
+							<div class="mui-table-view-cell mui-collapse l_nav_content">
+								<a class="mui-navigate-right" href="#">关于</a>
+								<ul class="mui-collapse-content l_nav_detail">
+									<li><a href="">公司简介</a></li>
+									<li><a href="">联系方式</a></li>
+								</ul>
+							</div>	
+							
+						<!-- </div> -->
+							<div class="mui-table-view-cell mui-collapse l_nav_content">
+								<a class="mui-navigate-right" href="#">服务</a>
+								<ul class="mui-collapse-content l_nav_detail">
+									<li><a href="">PC+移动端</a></li>
+									<li><a href="">外贸网站</a></li>
+									<li><a href="">电商网站</a></li>
+									<li><a href="">微信小程序</a></li>
+									<li><a href="">APP开发</a></li>
+									<li><a href="">企业邮箱</a></li>
+								</ul>
+							</div>	
+							
+							<div class="mui-table-view-cell mui-collapse l_nav_content">
+								<a class="mui-navigate-right" href="#">推广</a>
+								<ul class="mui-collapse-content l_nav_detail">
+									<li><a href="">国内推广——米推云</a></li>
+									<li><a href="">Google AdWords</a></li>
+								</ul>
+							</div>	
+							
+							<div class="mui-table-view-cell mui-collapse l_nav_content">
+								<a class="mui-navigate-right" href="#">案例</a>
+								<ul class="mui-collapse-content l_nav_detail">
+									<li><a href="">网站案例</a></li>
+									<li><a href="">小程序案例</a></li>
+								</ul>
+							</div>	
+							
+							<div class="mui-table-view-cell mui-collapse l_nav_content">
+								<a class="mui-navigate-right" href="#">新闻</a>
+								<ul class="mui-collapse-content l_nav_detail">
+									<li><a href="">公司动态</a></li>
+									<li><a href="">行业新闻</a></li>
+								</ul>
+							</div>	
+							
+							<div class="mui-table-view-cell mui-collapse l_nav_content">
+								<a class="mui-navigate-right" href="#">联系我们</a>
+								<!-- <ul class="mui-collapse-content l_nav_detail">
+									<li><a href="">公司动态</a></li>
+									<li><a href="">行业新闻</a></li>
+								</ul> -->
+							</div>	
+							
+					</div>
+				</div>
+			</aside>
+			<div class="mui-inner-wrap">
+				<!-- 主页头部 -->
+				<header class="mui-bar mui-bar-nav l_main_nav">				
+					<div class="_main_nav">
+						<div class="_nav_logo">
+							<img src="../img/logo.png" alt="">
+						</div>
+					</div>
+					<a id="offCanvasBtn" href="#offCanvasSide" class="mui-icon mui-action-menu mui-icon-bars mui-pull-right"></a>
+				</header>
+				<!-- 主要内容 -->
+				<div id="offCanvasContentScroll" class="mui-content mui-scroll-wrapper l_main">
+					<div class="l_app">
+						<div class="l_banner">
+							<img src="" alt="">
+						</div>
+						
+						<div class="l_app_content">
+							<div class="l_app_title">
+								<h3>IOS APP 3 大开发优势</h3>
+							</div>
+							<div class="l_app_advantage">
+								<div class="l_app_detail">
+									<div class="l_detail_title">
+										<h4>IOS APP营养更易吸收</h4>
+									</div>
+									<div class="l_detail_img">
+										<img src="" alt="">
+									</div>
+									<div class="l_detail_content">
+										<p>iPhone的用户更倾向于为中意的 App 付费，一部分原因可能由于 iPhone 用户的确比较富足，另一部分原因则在于 iTunes 与信用卡之间的整合，其支付方式十分方便。 相同的一个应用，同时在安卓与苹果平台上发布运营，其用户愿意进行消费的，基本整体倾向于苹果用户。</p>
+									</div>
+								</div>
+								
+								<div class="l_app_detail">
+									<div class="l_detail_title">
+										<h4>IOS应用发布统一也唯一</h4>
+									</div>
+									<div class="l_detail_img">
+										<img src="" alt="">
+									</div>
+									<div class="l_detail_content">
+										<p>苹果用户想要在iphone、ipad、mac机上安装任何的应用，都只能在App Store应用商店中下载，用户在这里下载的所有记录和评论都为应用成为一个很好的背书，相对于安卓有海量的应用商店，而苹果的唯一性，很大程度的减少了用户找不少应用的问题，同时也减少了应用方在多平台上维护的费用。</p>
+									</div>
+								</div>
+								
+								<div class="l_app_detail">
+									<div class="l_detail_title">
+										<h4>IOS系统机型少、适配性最优</h4>
+									</div>
+									<div class="l_detail_img">
+										<img src="" alt="">
+									</div>
+									<div class="l_detail_content">
+										<p>iPhone的用户更倾向于为中意的 App 付费，一部分原因可能由于 iPhone 用户的确比较富足，另一部分原因则在于 iTunes 与信用卡之间的整合，其支付方式十分方便。 相同的一个应用，同时在安卓与苹果平台上发布运营，其用户愿意进行消费的，基本整体倾向于苹果用户。</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="_app_need">
+							<div class="l_need">
+								<div class="_need_title">
+									<h4>我有开发需求</h4>
+									<p>请在下表格填写您的信息以及您的开发需求并提交，我们商务人员会在第一时间联系您</p>
+								</div>
+								<div class="_need_input">
+									<form class="_need_table_input">
+										<input name="name" type="text" placeholder="*你的姓名：">
+										<input name="mobile" type="text" placeholder="*您的联系电话：">
+										<input name="weixin" type="text" placeholder="您的微信号">
+										<input name="company" type="text" placeholder="*您的企业名称">
+										<textarea name="detail" placeholder="*您的需求和建议"></textarea>
+										<input type="submit" id="page_consultform_submit" class="message-submit" value="提交需求">
+									</form>
+								</div>
+							</div>
+						</div>		
+					
+					</div>
+					
+		
+					<!-- footer -->
+					<div class="footer">
+						
+						<div class="l_footer_img">
+							<img src="../img/qr.png" alt="">
+						</div>
+						<div class="l_footer_message">
+							<h4>烟台正米网络科技有限公司</h4>
+							<ul>
+								<li>地址：烟台市开发区金沙江路11号北京中长兴工业园5号楼401室</li>
+								<li>电话：18953520205</li>
+								<li>邮箱：ligen@zheng-mi.com</li>
+								<li>网址：www.zheng-mi.com</li>
+							</ul>
+						</div>
+					</div>
+						
+				</div>
+				<!-- off-canvas backdrop -->
+				<div class="mui-off-canvas-backdrop"></div>
+			</div>
+		</div>
+		<script src="../js/mui.js"></script>
+		<script src="../js/my/main.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>
