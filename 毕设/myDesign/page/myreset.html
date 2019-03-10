@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="author" content="YY-MO">
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+		<meta content="telephone=no" name="format-detection" />
+		
+		<title>小学生成语学习系统</title>
+		<link rel="stylesheet" type="text/css" href="../css/main.css"/>
+
+	</head>
+	<body>
+		<!--top start-->
+		<div id="nav" class="l_top">
+			<div class="top_logo">
+				<img src="../img/new-logo.png" alt="" />
+			</div>
+			<div class="top_title">
+				<h4>小学生成语学习系统</h4>
+			</div>
+			<div class="top_right">
+				<p class="yourname">你的名字<a href="">退出登录</a></p>
+				<div class="top_pic">
+					<img src="../img/login-bg.png" alt="" />
+				</div>
+			</div>
+		</div>
+		<!--top end-->
+		
+		<!--sl-main content start-->
+		<div class="sl_content">
+			<!--left start-->
+			<div class="sl_left">
+				<ul class="left_guide">
+					<li>
+						<a href="startLearning.html#letter">成语学习<span><img src="../img/irow.png"/></span></a>
+					</li>
+					<li>
+						<a href="cidian.html#letterA">成语词典<span><img src="../img/irow.png"/></span></a>
+					</li>
+					<li>
+						<a href="shoucang.html">我的收藏<span><img src="../img/irow.png"/></span></a>
+					</li>
+					<li>
+						<a href="game.html">趣味游戏<span><img src="../img/irow.png"/></span></a>
+					</li>
+					<li class="sl_active">
+						<a href="myreset.html">我的设置<span><img src="../img/irow.png"/></span></a>
+					</li>
+					<!--<li></li>-->
+				</ul>
+			</div>
+			<!--left end-->
+			
+			<div class="my_content l-fr">
+				<div class="my_detail">
+					<div class="mytop">
+						<div class="mytop-img l-fl">
+							<img src="../img/5.jpg" alt="" />
+						</div>
+						<div class="mytop-reset l-fl">
+							<input type="text" name="" id="" value="你的昵称"/>
+						</div>
+						
+					</div>
+					<div class="mymiddle">
+						<ul class="mymiddle-reset">
+							<li>
+								<div class="mima" id="password" onclick="showReset()">
+									<p>修改密码</p>
+									<img src="../img/irow-black.png" alt="" />
+								</div>
+								<div class="my-hidden" id="mymiddle-hidden">
+									<form action="">
+										<p>请输入新密码:<input type="password" name="" id="" required="required"></p>
+										<p>请确认密码密码:<input type="password" name="" id="" required="required"/></p>
+										<input type="submit" value="保存" class="mysubmit" onclick="passReset()">
+									</form>
+								</div>
+							</li>
+							<li>
+								<div class="mima" id="password">
+									<p>学习记录</p>
+									<img src="../img/irow-black.png" alt="" />
+								</div>
+								<div class="my-hidden" id="mymiddle-hidden">
+									<form action="">
+										<p>请输入新密码:<input type="password" name="" id="" required="required"></p>
+										<p>请确认密码密码:<input type="password" name="" id="" required="required"/></p>
+										<input type="submit" value="保存" class="mysubmit" onclick="passReset()">
+									</form>
+								</div>
+							</li>
+							<li>
+								<div class="mima" id="password" onclick="showAbo()">
+									<p>关于</p>
+									<img src="../img/irow-black.png" alt="" />
+								</div>
+								<div class="my-hidden" id="about-hidden">
+									<p>吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦</p>
+								</div>
+							</li>
+							<li>
+								<div class="mima" id="password" onclick="showLea1()">
+									<p>反馈</p>
+									<img src="../img/irow-black.png" alt="" />
+								</div>
+								<div class="my-hidden" id="lea-hide">
+									<form action="">
+										<p>您的姓名:<input type="password" name="" id="" required="required"></p>
+										<p>联系方式:<input type="password" name="" id="" required="required"/></p>
+										<p>留言反馈：<textarea name="留言反馈" rows="4" cols="20"></textarea></p>
+										<input type="submit" value="提交" class="mysubmit" required="required" onclick="passReset()">
+									</form>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+			<!--sl main end-->
+	
+		<script type="text/javascript">
+			var hide = document.getElementById("mymiddle-hidden");
+			var leah = document.getElementById("lea-hide");
+			var aboh = document.getElementById("about-hidden");
+			var cli1 = 1;
+			var cli3 = 1;
+			var cli4 = 1; 
+//			function showReset(){
+//				if(cli1%2 != 0){
+//					hide.style.display = "block";
+//				}
+//				else{
+//					hide.style.display = "none";
+//				}
+//				cli1 = cli1 + 1;
+//			};
+			function showAbo(){
+				if(cli3%2 != 0){
+					aboh.style.display = "block";
+				}
+				else{
+					aboh.style.display = "none";
+				}
+				cli3 = cli3 + 1;
+			}
+			function showLea1(){
+				if(cli4%2 != 0){
+					leah.style.display = "block";
+				}
+				else{
+					leah.style.display = "none";
+				}
+				cli4 = cli4 + 1;
+			}
+			function showReset(){
+				if(cli1%2 != 0){
+					hide.style.display = "block";
+				}
+				else{
+					hide.style.display = "none";
+				}
+				cli1 = cli1 + 1;
+			};
+		
+		</script>
+		
+	</body>
+</html>

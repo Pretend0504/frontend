@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="author" content="YY-MO">
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+		<meta content="telephone=no" name="format-detection" />
+		
+		<title>小学生成语学习系统</title>
+		<link rel="stylesheet" type="text/css" href="../css/main.css"/>
+
+	</head>
+	<body>
+		<!--top start-->
+		<div id="nav" class="l_top">
+			<div class="top_logo">
+				<img src="../img/new-logo.png" alt="" />
+			</div>
+			<div class="top_title">
+				<h4>小学生成语学习系统</h4>
+			</div>
+			<div class="top_right">
+				<p class="yourname">你的名字<a href="">退出登录</a></p>
+				<div class="top_pic">
+					<img src="../img/login-bg.png" alt="" />
+				</div>
+			</div>
+		</div>
+		<!--top end-->
+		
+		<!--sl-main content start-->
+		<div class="sl_content">
+			<!--left start-->
+			<div class="sl_left">
+				<ul class="left_guide">
+					<li>
+						<a href="startLearning.html#letter">成语学习<span><img src="../img/irow.png"/></span></a>
+					</li>
+					<li class="sl_active">
+						<a href="cidian.html#letterA">成语词典<span><img src="../img/irow.png"/></span></a>
+					</li>
+					<li>
+						<a href="shoucang.html">我的收藏<span><img src="../img/irow.png"/></span></a>
+					</li>
+					<li>
+						<a href="game.html">趣味游戏<span><img src="../img/irow.png"/></span></a>
+					</li>
+					<li>
+						<a href="myreset.html">我的设置<span><img src="../img/irow.png"/></span></a>
+					</li>
+					<!--<li></li>-->
+				</ul>
+			</div>
+			<!--left end-->
+			
+			<!--wd main start-->
+			<div class="wd_right">
+				<div class="game_right">
+					<p>推荐学习</p>
+					<ul class="game_intro">
+						<li><a href="">水滴石穿</a></li>
+						<li><a href="">水滴石穿</a></li>
+						<li><a href="">水滴石穿</a></li>
+						<li><a href="">水滴石穿</a></li>
+						<li><a href="">水滴石穿</a></li>
+						<li><a href="">水滴石穿</a></li>
+						<li><a href="">水滴石穿</a></li>
+						<li><a href="">水滴石穿</a></li>
+						<li><a href="">水滴石穿</a></li>
+						<li><a href="">水滴石穿</a></li>
+						<li><a href="">水滴石穿</a></li>
+						<li><a href="">水滴石穿</a></li>
+						
+					</ul>
+				</div>
+				
+				<div class="wd_content l-fr">
+					<div class="wd_top">
+						<div class="wd_name l-fl">
+							<p>shui di shi chuan</p>
+							<h3>水滴石穿</h3>
+						</div>
+						<div class="wd_shoucang" id="wd_sh" onclick="changeColor()">
+							<img id="wd_img1" src="../img/wd_shoucang.png" alt="" title="添加收藏"/>
+							<img id="wd_img2" src="../img/shoucang-page.png" alt="" title="收藏成功"/>
+						</div>
+					</div>
+					<div class="wd_detail">
+						<div class="wd_explain wd_det">
+							<h5>成语解释</h5>
+							<p>滴：滴落。穿：洞穿。水一直向下滴，时间长了能把石头滴穿。比喻只要坚持不懈，细微之力也能做出很难办的事。也比喻只要有恒心，不断努力，持之以恒，事情就可能成功。</p>
+						</div>
+						<div class="wd_from wd_det">
+							<h5>成语出处</h5>
+							<p>张乖崖为崇阳(古县名)令,一吏自库(钱库)中出,视其鬓旁巾(头巾)下有一钱(铜钱),诘之,乃库中钱也。乖崖命杖之,更勃然(发怒的样子)日:“一钱何足道,乃杖我耶?尔能杖我,不能斩我也!”乖崖援笔判云:“一日一钱,千日千钱,绳锯木断,水滴石穿!”自仗剑下阶斩其首。(选自《鹤林玉露》)。</p>
+						</div>
+						<div class="wd_others wd_det">
+							<h5>同/反义词</h5>
+							<p><span>同义词：</span>锲而不舍、滴水穿石、持之以恒、坚持不懈</p>
+							<!--<ul>
+								<li>锲而不舍</li>
+								<li>滴水穿石</li>
+								<li>持之以恒</li>
+								<li>坚持不懈</li>
+							</ul>-->
+							<p><span>反义词：</span>虎头蛇尾、半途而废、浅尝辄止、锲而舍之</p>
+							<!--<ul>
+								<li>虎头蛇尾</li>
+								<li>半途而废</li>
+								<li>浅尝辄止</li>
+								<li>锲而舍之</li>
+							</ul>-->
+						</div>
+					</div>
+					
+					
+				</div>
+				
+				<script type="text/javascript">
+					var sh = document.getElementById("wd_sh");
+					var img1 = document.getElementById("wd_img1");
+					var img2 = document.getElementById("wd_img2");
+					var click = 1;
+					function changeColor(){
+						if(click%2==0){
+							img1.style.display = "block";
+							img2.style.display = "none";
+						}
+						else if(click%2 != 0){
+							img1.style.display = "none";
+							img2.style.display = "block";
+						}
+						click +=1;
+					}
+				</script>
+				
+			</div>
+			<!--wd main end-->
+		</div>
+		<!--sl-main content end-->
+		
+		
+		
+	</body>
+</html>
