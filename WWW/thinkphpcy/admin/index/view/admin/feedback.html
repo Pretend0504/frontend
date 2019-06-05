@@ -1,0 +1,56 @@
+<link rel="stylesheet" type="text/css" href="__CSS__/admin.css"/>
+
+<div class="admin_chengyu">
+	<div class="admin_chengyu_content admin_feedback_content">
+		<ul class="ad_chengyu_name">
+			<li class="feedb-1 l_fl">
+				<p>学生账号</p>
+				{{volist name="fankui" id="v"}}
+				<span>{{$v.u_user}}</span>
+				{{/volist}}
+			</li>
+			<li class="feedb-2 l_fl">
+				<p>学生昵称</p>
+				{{volist name="fankui" id="v"}}
+				<span>{{$v.name}}</span>
+				{{/volist}}
+			</li>
+			<li class="feedb-3 l_fl">
+				<p>联系方式</p>
+				{{volist name="fankui" id="v"}}
+				<span>{{$v.contact}}</span>
+				{{/volist}}
+			</li>
+			<li class="feedb-4 l_fl">
+				<p>留言内容</p>
+				{{volist name="fankui" id="v"}}
+				<span>{{$v.content}}</span>
+				{{/volist}}
+			</li>
+			<li class="feedb-5 l_fl">
+				<p>留言时间</p>
+				{{volist name="fankui" id="v"}}
+				<span>{{$v.add_time|date='Y-m-d H:i',###}}</span>
+				{{/volist}}
+			</li>
+		</ul>
+	</div>
+</div>
+<!--<table border="1">
+	<tr>
+		<td>学生账号</td>
+		<td>学生名字</td>
+		<td>学生联系方式</td>
+		<td>学生留言内容</td>
+		<td>学生留言内容</td>
+	</tr>
+	{{volist name="fankui" id="v"}}
+	<tr>
+		<td>{{$v.u_user}}</td>
+		<td>{{$v.name}}</td>
+		<td>{{$v.contact}}</td>
+		<td>{{$v.content}}</td>
+		<td>{{$v.add_time|date='Y-m-d H:i',###}}</td>
+	</tr>
+	{{/volist}}
+</table>-->

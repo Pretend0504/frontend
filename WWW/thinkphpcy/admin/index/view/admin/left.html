@@ -1,0 +1,55 @@
+
+<link rel="stylesheet" type="text/css" href="__CSS__/main.css"/>
+<link rel="stylesheet" type="text/css" href="__CSS__/admin.css"/>
+<div class="sl_content">
+	<div class="admin_left_content" style="width: 100%;">
+		<ul class="left_guide admin_reset">
+			<li class="" onclick="add_userinfo()"><a href="__URL__/userinfo" target='right' id="ad_userinfo">学生信息</a></li>
+			<li class="" onclick="add_chengyu()"><a href="__URL__/chengyu" target='right' id="ad_chengyu">成语操作</a></li>
+			<li class="" onclick="add_question()"><a href="__URL__/question" target='right' id="ad_question">题目操作</a></li>
+			<li class="" onclick="add_feedback()"><a href="__URL__/feedback" target='right' id="ad_feedback">留言查看</a></li>
+			<li class="" onclick="add_admin()"><a href="__URL__/add_admin" target='right' id="ad_admin">添加管理员</a></li>
+		</ul>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+	function add_userinfo(){
+		document.getElementById("ad_userinfo").classList.add("left_active");
+		document.getElementById("ad_chengyu").classList.remove("left_active");
+		document.getElementById("ad_question").classList.remove("left_active");
+		document.getElementById("ad_feedback").classList.remove("left_active");
+		document.getElementById("ad_admin").classList.remove("left_active");
+	}
+	function add_chengyu(){
+		document.getElementById("ad_userinfo").classList.remove("left_active");
+		document.getElementById("ad_chengyu").classList.add("left_active");
+		document.getElementById("ad_question").classList.remove("left_active");
+		document.getElementById("ad_feedback").classList.remove("left_active");
+		document.getElementById("ad_admin").classList.remove("left_active");
+	}
+	function add_question(){
+		document.getElementById("ad_userinfo").classList.remove("left_active");
+		document.getElementById("ad_chengyu").classList.remove("left_active");
+		document.getElementById("ad_question").classList.add("left_active");
+		document.getElementById("ad_feedback").classList.remove("left_active");
+		document.getElementById("ad_admin").classList.remove("left_active");
+	}
+	function add_feedback(){
+		document.getElementById("ad_userinfo").classList.remove("left_active");
+		document.getElementById("ad_chengyu").classList.remove("left_active");
+		document.getElementById("ad_question").classList.remove("left_active");
+		document.getElementById("ad_feedback").classList.add("left_active");
+		document.getElementById("ad_admin").classList.remove("left_active");
+	}
+	function add_admin(){
+		document.getElementById("ad_userinfo").classList.remove("left_active");
+		document.getElementById("ad_chengyu").classList.remove("left_active");
+		document.getElementById("ad_question").classList.remove("left_active");
+		document.getElementById("ad_feedback").classList.remove("left_active");
+		document.getElementById("ad_admin").classList.add("left_active");
+	}
+	
+	
+</script>

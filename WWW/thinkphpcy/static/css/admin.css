@@ -1,0 +1,363 @@
+body{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+ul,li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+img{
+	display: block;
+	width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+h1,h2,h3,h4,h5,p,a{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+.l_fl{
+	float: left;
+}
+.l_fr{
+	float: right;
+}
+
+
+
+/*left*/
+.left_active{
+	font-size: 20px!important;
+	color: #5c6bc0;
+	font-weight: 600!important;
+}
+
+/*right*/
+.admin_first{
+	width: 80%;
+	margin: auto;
+	margin-top: 100px;
+}
+.admin_first h2{
+	font-size: 40px;
+	color: #5c6bc0;
+	display: block;
+	text-align: center;
+	margin: 20px 0;
+}
+
+/*admin-top*/
+.admin_top{
+	width: 100%;
+	height: 80px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,.1)
+}
+.admin_top_content{
+	width: 1140px;
+	margin: auto;
+}
+.admin_left{
+	width: 100px;
+	padding: 10px;
+}
+.admin_right{
+	width: 200px;
+	height: 80px;
+	text-align: center;
+}
+.admin_right p{
+	font-size: 16px;
+	color: #666;
+	margin-top: 45px;
+}
+.admin_right p a{
+	font-size: 13px;
+	padding-left:25px;
+	color: #999;
+}
+.admin_middle{
+	width: 810px;
+	height: 80px;
+	text-align: center;
+}
+.admin_middle h4{
+	font-size: 24px;
+	color: #444;
+	margin-top: 30px;
+}
+
+/*admin-left*/
+.admin_left_content{
+	position: fixed;
+    width: 27%;
+    padding-top: 120px;
+    float: left;
+    height: 100vh;
+    border-right: 1px solid #ddd;
+}
+.admin_reset{
+	background: #fff!important;
+}
+.left_guide li{
+	height: 50px;
+	text-align: end;
+	box-shadow: none!important;
+}
+.admin_reset li a{
+	color: #5c6bc0;
+}
+.admin_reset li:hover a{
+	font-size: 20px!important;
+    color: #5c6bc0!important;
+    font-weight: 600;
+}
+   
+/*admin user*/ 
+.ad_user{
+	margin-top: 50px;
+	text-align: center;
+}
+.ad_user h4{
+	font-size: 20px;
+	color: #444;
+	font-weight: 500;
+}
+.ad_user_content{
+	width: 80%;
+	margin: auto;
+	margin-top: 30px;
+	
+}
+
+.ad_user_name,.ad_chengyu_name{
+	overflow: hidden;
+	border-left: 1px solid #999;
+	
+}
+.line_1{
+	width: 25%;
+}
+.line_2,.line_3{
+	width: 37%;
+}
+.ad_user_content ul li{
+	text-align: center;
+	line-height: 40px;
+}
+.ad_user_content ul li p{
+	font-size: 16px;
+	color: #333;
+	border-bottom: 1px solid #999;
+	border-top: 1px solid #999;
+}
+.ad_user_content ul li span{
+	display: block;
+	color: #444;
+	border-bottom: 1px solid #999;
+}
+.line_1,.line_2,.line_3{
+	border-right: 1px solid #999;
+}
+
+/*chengyu*/
+.admin_chengyu{
+	/*width: 100%;*/
+	height: auto;
+	padding: 0 30px;
+	margin-top: 40px;
+}
+.admin_chengyu_add{
+	/*width: 100px;
+	height: 40px;*/
+	overflow: hidden;
+	
+}
+.admin_chengyu_add a{
+	display: block;
+	padding: 10px 15px;
+	background: #5c6bc0;
+	color: #fff;
+	font-size: 16px;
+	float: right;
+	margin-bottom: 20px;
+	border-radius: 2px;
+}
+.admin_chengyu_content{
+	width: 100%;
+	height: auto;
+}
+.admin_chengyu_content ul li{
+	text-align: center;
+	border-right: 1px solid #999;;
+}
+.admin_chengyu_content ul li p{
+	font-size: 16px;
+	height: 60px;
+	color: #333;
+	padding: 10px;
+	border-bottom: 1px solid #999;
+	border-top: 1px solid #999;
+}
+.admin_chengyu_content ul li span{
+	display: block;
+	padding: 10px;
+	height: 100px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+	border-bottom: 1px solid #999;
+}
+.line1{
+	width: 50px;
+	/*padding: 10px;*/
+}
+.line2{
+	width: 70px;
+}
+.line3,.line4,.line5{
+	width: 250px;
+}
+.line6,.line7{
+	width: 66px;
+}
+.line7 a{
+	color: #5c6bc0;
+	margin: 10px 0;
+	display: block;
+}
+
+.pagination{
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	margin: auto;
+	margin-top: 30px;
+}
+.pagination li{
+	float: left;
+	margin: 10px;
+}
+.pagination li span{
+	/*color: #5c6bc0;*/
+}
+.ad_question_content ul li p,.ad_question_content ul li span{
+	height: 30px;
+	padding: 15px 15px;
+}
+.line-3 span a{
+	padding: 0 10px;
+	color: #5c6bc0!important;
+} 
+.line-1{
+	width: 65%;
+}
+.line-2,.line-3{
+	width: 16%;
+}
+
+/*feedback*/
+.feedb-1,.feedb-2,.feedb-3,.feedb-5{
+	width: 180px;
+}
+.feedb-4{
+	width: 250px;
+}
+.admin_feedback_content ul li p{
+	height: 40px;
+	padding-top: 20px;
+}
+
+/*add admin*/
+.add_admin,.cyupdate{
+	width: 80%;
+	margin: auto;
+	margin-top: 80px;
+}
+.add_admin h3{
+	font-size: 26px;
+	color: #5c6bc0;
+	text-align: center;
+	margin-bottom: 50px;
+}
+.add_admin form,.cyupdate form{
+	width: 80%;
+	margin: auto;
+}
+.add_admin form p{
+	font-size: 18px;
+	text-align: center;
+}
+.add_admin form p input{
+	line-height: 30px;
+	font-size: 18px;
+	padding: 0 20px;
+	width: 300px;
+}
+.admin_submit{
+	border: none;
+	color: #fff;
+	padding: 10px 25px;
+	font-size: 16px;
+	background: #5c6bc0;
+	border-radius: 2px;
+	display: flex;
+	margin: auto;
+	margin-top: 30px;
+}
+
+/*cyupdate*/
+.cyupdate form p{
+	font-size: 16px;
+	margin-bottom: 15px;
+}
+.cyupdate form p input{
+	line-height: 30px;
+	font-size: 16px;
+	padding: 5px 10px;
+	width: 500px;
+}
+
+.admin-sear{
+	position: relative;
+	width: 60%;
+	display: flex;
+	margin: auto;
+}
+.admin-sear form{
+	width: 100%;
+}
+.admin_search{
+	position: relative;
+	width: 100%;
+	height: 60px;
+	padding: 5px 60px 5px 10px;
+    font-size: 16px;
+}
+.admin_img_search{
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform: translate(-50%,50%);
+}
+.tmadd{
+	display: flex;
+    justify-content: center;
+    margin-left: -50px;
+}
+.tmadd input{
+    width: 90px;
+    height: 45px;
+    border-radius: 2px;
+    border: none;
+    background: #5c6bc0;
+    color: #fff;
+    font-size: 16px;
+    margin: 30px 20px
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="author" content="YY-MO">
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+		<meta content="telephone=no" name="format-detection" />
+		
+		<title>小学生成语学习系统</title>
+		<link rel="stylesheet" type="text/css" href="__CSS__/main.css"/>
+		<script type="text/javascript" src="__JS__/jquery-2.1.4.min.js"></script>
+	</head>
+	<body>
+		<!--top start-->
+		<div id="nav" class="l_top">
+			<div class="top_logo">
+				<img src="__IMG__/new-logo.png" alt="" />
+			</div>
+			<div class="top_title">
+				<h4>小学生成语学习系统</h4>
+			</div>
+			<div class="top_right">
+				<p class="yourname">{{$info.user}}<a href="/thinkphpcy/index/user/logout">退出登录</a></p>
+				<div class="top_pic">
+					<img src="/thinkphpcy/static/uploads/head/{{$info.head}}" alt="" />
+				</div>
+			</div>
+		</div>
+		<!--top end-->
+		
+		<!--sl-main content start-->
+		<div class="sl_content">
+			<!--left start-->
+			<div class="sl_left">
+				<ul class="left_guide">
+					{{if $type=='cyxx'}}
+						<li class="sl_active">
+					{{else /}}
+						<li>
+					{{/if}}
+							<a href="__URL__/startLearning">成语学习<span><img src="__IMG__/irow.png"/></span></a>
+						</li>
+					{{if $type=='cycd'}}
+						<li class="sl_active">
+					{{else /}}
+						<li>
+					{{/if}}
+							<a href="__URL__/cidian">成语词典<span><img src="__IMG__/irow.png"/></span></a>
+						</li>
+					{{if $type=='wdsc'}}
+						<li class="sl_active">
+					{{else /}}
+						<li>
+					{{/if}}
+							<a href="__URL__/shoucang">我的收藏<span><img src="__IMG__/irow.png"/></span></a>
+						</li>
+					{{if $type=='qwyx'}}
+						<li class="sl_active">
+					{{else /}}
+						<li>
+					{{/if}}
+							<a href="__URL__/game">趣味游戏<span><img src="__IMG__/irow.png"/></span></a>
+						</li>
+						{{if $type=='cydt'}}
+						<li class="sl_active">
+					{{else /}}
+						<li>
+					{{/if}}
+							<a href="__URL__/question">学习检测<span><img src="__IMG__/irow.png"/></span></a>
+						</li>
+					{{if $type=='wdsz'}}
+						<li class="sl_active">
+					{{else /}}
+						<li>
+					{{/if}}
+							<a href="__URL__/myreset">我的设置<span><img src="__IMG__/irow.png"/></span></a>
+						</li>
+					
+					<!--<li></li>-->
+				</ul>
+			</div>
+			<!--left end-->
+			

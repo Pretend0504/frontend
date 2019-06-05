@@ -1,0 +1,107 @@
+{{include file="public/header_index" /}}
+			
+			<!--sl main start-->
+			<div class="cd_search">
+				<form  action="__URL__/mhcx" method="post">
+					<input class="text_search" type="search" name="search" id="search" value="" placeholder="成语搜索 支持模糊查询"/>
+					<input class="img_search" type="image" src="__IMG__/search.png" alt="Submit" />
+				</form>
+				<!--<div class="sl_title">
+					<p>随机推荐</p>
+					<a href="">换一批</a>
+				</div>-->
+			</div>
+			<div class="sl_mc">
+				<div class="sl_detail">
+					<ul id="letter" class="letters ci_letter">
+						<li><a href="#letterA">A</a></li>
+						<li><a href="#letterB">B</a></li>
+						<li><a href="#letterC">C</a></li>
+						<li><a href="#letterD">D</a></li>
+						<li><a href="#letterE">E</a></li>
+						<li><a href="#letterF">F</a></li>
+						<li><a href="#letterG">G</a></li>
+						<li><a href="#letterH">H</a></li>
+						<li><a href="#letterI">I</a></li>
+						<li><a href="#letterJ">J</a></li>
+						<li><a href="#letterK">K</a></li>
+						<li><a href="#letterL">L</a></li>
+						<li><a href="#letterM">M</a></li>
+						<li><a href="#letterN">N</a></li>
+						<li><a href="#letterO">O</a></li>
+						<li><a href="#letterP">P</a></li>
+						<li><a href="#letterQ">Q</a></li>
+						<li><a href="#letterR">R</a></li>
+						<li><a href="#letterS">S</a></li>
+						<li><a href="#letterT">T</a></li>
+						<li><a href="#letterU">U</a></li>
+						<li><a href="#letterV">V</a></li>
+						<li><a href="#letterW">W</a></li>
+						<li><a href="#letterX">X</a></li>
+						<li><a href="#letterY">Y</a></li>
+						<li><a href="#letterZ">Z</a></li>
+					</ul>
+					{{if $chengyu}}
+					{{volist name="chengyu" id="vo"}}
+						<p class="l_sort">{{$vo.shou}}</p>
+						<ul id="{{$vo.link}}" class="words_items cd_item">
+							<!--<li class="cd-letter">
+								A
+							</li>-->
+							{{volist name="vo" id="v"}}
+							{{if condition="is_string($v)"}}
+							{{else /}}
+							<li>
+								<a href="__URL__/word_detail?id={{$v.ID}}">
+									<div class="word_it">
+										<p>{{$v.ChengYu}}</p>
+										<img src="__IMG__/irow-black.png" alt="" />
+									</div>	
+								</a>
+							</li>
+							{{/if}}
+							{{/volist}}
+						</ul>
+					{{/volist}}
+					{{else /}}
+						<p>没有查到</p>
+					{{/if}}
+				</div>
+			</div>
+			<!--sl main end-->
+		</div>
+		<!--sl-main content end-->
+		
+			<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+			   $(window).scroll(function() {
+			     //获取 id="course_container" 元素，offsetTop是当前元素·距离网页窗口顶部的距离
+			     var offset_top = document.getElementById("letter").offsetTop;
+			     
+			     var o = document.getElementById("nav");
+				 var h = o.offsetHeight; //高度
+			     // console.log("tab距离顶部的距离：" + offset_top)
+			
+			     //获取垂直滚动的距离（scrollTop()是从顶部开始滚动产生的距离）
+			     var scroll_top = $(document).scrollTop();
+			     // console.log("滚动的距离:" + scroll_top)
+			    var s = offset_top - scroll_top;
+			     if ( s < h ) {
+//			       console.log("fixed success")
+			       // 到达顶部位置，动态的添加元素属性，并给元素添加相应的元素样式
+			       document.getElementById("letter").classList.add("cd_letter_fixed");  
+			     } else {
+			       // 同理，把之前添加的元素移除即可
+			       document.getElementById("letter").classList.remove("cd_letter_fixed");  
+			     }
+			   });
+			 });
+
+
+		</script>
+	
+	
+		
+	</body>
+</html>

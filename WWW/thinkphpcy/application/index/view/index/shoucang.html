@@ -1,0 +1,96 @@
+{{include file="public/header_index" /}}
+			
+			<!--sl main start-->
+			<div class="sl_search">
+				<form  action="__URL__/mhcx" method="post">
+					<input class="text_search" type="search" name="search" id="search" value="" placeholder="成语搜索 支持模糊查询"/>
+					<input class="img_search" type="image" src="__IMG__/search.png" alt="Submit" />
+				</form>
+				<div class="sl_title">
+					<p><img src="__IMG__/shoucang-page.png" alt="" />我的收藏</p>
+					<!--<a href="">换一批</a>-->
+				</div>
+			</div>
+			<div class="sl_mc">
+				<div class="sl_detail">
+					<ul id="letter" class="letters ci_letter">
+						<li><a href="__URL__/shoucang?zimu=a">A</a></li>
+						<li><a href="__URL__/shoucang?zimu=b">B</a></li>
+						<li><a href="__URL__/shoucang?zimu=c">C</a></li>
+						<li><a href="__URL__/shoucang?zimu=d">D</a></li>
+						<li><a href="__URL__/shoucang?zimu=e">E</a></li>
+						<li><a href="__URL__/shoucang?zimu=f">F</a></li>
+						<li><a href="__URL__/shoucang?zimu=g">G</a></li>
+						<li><a href="__URL__/shoucang?zimu=h">H</a></li>
+						<li><a href="__URL__/shoucang?zimu=i">I</a></li>
+						<li><a href="__URL__/shoucang?zimu=j">J</a></li>
+						<li><a href="__URL__/shoucang?zimu=k">K</a></li>
+						<li><a href="__URL__/shoucang?zimu=l">L</a></li>
+						<li><a href="__URL__/shoucang?zimu=m">M</a></li>
+						<li><a href="__URL__/shoucang?zimu=n">N</a></li>
+						<li><a href="__URL__/shoucang?zimu=o">O</a></li>
+						<li><a href="__URL__/shoucang?zimu=p">P</a></li>
+						<li><a href="__URL__/shoucang?zimu=q">Q</a></li>
+						<li><a href="__URL__/shoucang?zimu=r">R</a></li>
+						<li><a href="__URL__/shoucang?zimu=s">S</a></li>
+						<li><a href="__URL__/shoucang?zimu=t">T</a></li>
+						<li><a href="__URL__/shoucang?zimu=u">U</a></li>
+						<li><a href="__URL__/shoucang?zimu=v">V</a></li>
+						<li><a href="__URL__/shoucang?zimu=w">W</a></li>
+						<li><a href="__URL__/shoucang?zimu=x">X</a></li>
+						<li><a href="__URL__/shoucang?zimu=y">Y</a></li>
+						<li><a href="__URL__/shoucang?zimu=z">Z</a></li>
+					</ul>
+
+					<ul class="words_items mb-6">
+					{{volist name="ciyu" id="vo"}}
+						<li>
+							<a href="__URL__/word_detail?id={{$vo.cid}}">
+								<div class="word_it">
+									<p>{{$vo.chengyu}}</p>
+									<img src="__IMG__/irow-black.png" alt="" />
+								</div>	
+							</a>
+						</li>
+					{{/volist}}
+						
+					</ul>
+				</div>
+			</div>
+			<!--sl main end-->
+		</div>
+		<!--sl-main content end-->
+		
+			<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+			   $(window).scroll(function() {
+			     //获取 id="course_container" 元素，offsetTop是当前元素·距离网页窗口顶部的距离
+			     var offset_top = document.getElementById("letter").offsetTop;
+			     
+			     var o = document.getElementById("nav");
+				 var h = o.offsetHeight; //高度
+			     // console.log("tab距离顶部的距离：" + offset_top)
+			
+			     //获取垂直滚动的距离（scrollTop()是从顶部开始滚动产生的距离）
+			     var scroll_top = $(document).scrollTop();
+			     // console.log("滚动的距离:" + scroll_top)
+			    var s = offset_top - scroll_top;
+			     if ( s < h ) {
+//			       console.log("fixed success")
+			       // 到达顶部位置，动态的添加元素属性，并给元素添加相应的元素样式
+			       document.getElementById("letter").classList.add("letter_fixed");  
+			     } else {
+			       // 同理，把之前添加的元素移除即可
+			       document.getElementById("letter").classList.remove("letter_fixed");  
+			     }
+			   });
+			 });
+
+
+		</script>
+	
+	
+		
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<link rel="stylesheet" type="text/css" href="__CSS__/admin.css"/>
+
+<div class="admin_chengyu">
+	<div class="admin-sear">
+		<form action="__URL__/mhcx" method="post">
+			<input class="admin_search" type="search" name="search" id="search" value="" autocomplete="off" placeholder="成语搜索 支持模糊查询"/>
+			<input class="admin_img_search" type="image" src="__IMG__/search.png" alt="Submit" />
+		</form>
+	</div>
+	
+
+	
+	<div class="admin_chengyu_add"><a href="__URL__/cyadd">添加成语</a></div>
+	<div class="admin_chengyu_content">
+		<ul class="ad_chengyu_name">
+			{{if $chengyu}}
+					{{volist name="chengyu" id="vo"}}
+							{{volist name="vo" id="v"}}
+							
+							
+							<li>
+									<div class="word_it">
+										<p>{{$v.ChengYu}}</p>
+										
+									</div>	
+							</li>
+							{{/volist}}
+						</ul>
+					{{/volist}}
+					{{volist name="pinyin" id="vo"}}
+							{{volist name="vo" id="v"}}
+							
+							
+							<li>
+									<div class="word_it">
+										<p>{{$v.PinYin}}</p>
+										
+									</div>	
+							</li>
+							{{/volist}}
+						</ul>
+					{{/volist}}
+					{{else /}}
+						<p>没有查到</p>
+					{{/if}}
+		</ul>
+	</div>
+</div>
+

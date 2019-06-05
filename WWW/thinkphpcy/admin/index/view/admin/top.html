@@ -1,0 +1,21 @@
+<link rel="stylesheet" type="text/css" href="__CSS__/admin.css"/>
+<div class="admin_top">
+	<div class="admin_top_content">
+		<div class="admin_left l_fl">
+			<!--<img src="__IMG__/new-logo.png" alt="" />-->
+		</div>
+		<div class="admin_middle l_fl">
+			<h4>小学生成语学习管理系统</h4>
+		</div>
+		<div class="admin_right l_fl">
+			<p>你好，{{$info.user}}<a href="" onclick="logout()">退出</a></p>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+  function logout(){
+  window.top.location.href="/thinkphpcy/admin.php/index/login/logout";
+  }
+</script>

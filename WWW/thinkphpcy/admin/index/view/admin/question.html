@@ -1,0 +1,44 @@
+<link rel="stylesheet" type="text/css" href="__CSS__/admin.css"/>
+
+<div class="admin_chengyu">
+	<div class="admin_chengyu_add"><a href="__URL__/tmadd">添加题目</a></div>
+	<div class="admin_chengyu_content ad_question_content">
+		<ul class="ad_chengyu_name">
+			<li class="line-1 l_fl">
+				<p>题目</p>
+				{{volist name="timu" id="v"}}
+				<span>{{$v.question}}</span>
+				{{/volist}}
+			</li>
+			<li class="line-2 l_fl">
+				<p>答案</p>
+				{{volist name="timu" id="v"}}
+				<span>{{$v.answer}}</span>
+				{{/volist}}
+			</li>
+			<li class="line-3 l_fl">
+				<p>操作</p>
+				{{volist name="timu" id="v"}}
+				<span><a href="__URL__/tmupdate?id={{$v.id}}">修改</a>|<a href="__URL__/tmdel?id={{$v.id}}">删除</a></span>
+				{{/volist}}
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+<!--<table border="1" width="">
+	<tr>
+		<td>题目</td>
+		<td>答案</td>
+		<td>操作</td>
+	</tr>
+	{{volist name="timu" id="v"}}
+	<tr>
+		<td>{{$v.question}}</td>
+		<td>{{$v.answer}}</td>
+		<td style="width:50px"><a href="__URL__/tmupdate?id={{$v.id}}">修改</a>|<a href="__URL__/tmdel?id={{$v.id}}">删除</a></td>
+	</tr>
+	{{/volist}}
+</table>-->
+{{$list->render()}}

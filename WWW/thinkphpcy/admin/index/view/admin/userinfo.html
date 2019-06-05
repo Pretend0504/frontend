@@ -1,0 +1,30 @@
+<link rel="stylesheet" type="text/css" href="__CSS__/admin.css"/>
+
+<div class="ad_user">
+	<h4>学生信息</h4>
+</div>
+<div class="ad_user_content">
+	<ul class="ad_user_name">
+		<li class="line_1 l_fl">
+			<p>学生ID</p>
+			{{volist name="student" id="v"}}
+			<span>{{$v.id}}</span>
+			{{/volist}}
+		</li>
+		<li class="line_2 l_fl">
+			<p>学生用户名</p>
+			{{volist name="student" id="v"}}
+			<span>{{$v.user}}</span>
+			{{/volist}}
+		</li>
+		<li class="line_3 l_fl">
+			<p>学生登录时间</p>
+			{{volist name="student" id="v"}}
+			<span>{{$v.login_time}}</span>
+			{{/volist}}
+		</li>
+	</ul>
+
+	
+</div>
+

@@ -1,0 +1,108 @@
+{{include file="public/header_index" /}}
+			
+			<!--wd main start-->
+			<div class="wd_right">
+				<div class="game_right">
+					<p>推荐学习</p>
+					<ul class="game_intro">
+						{{volist name="data" id="vo"}}
+						<li>
+							<a href="__URL__/word_detail?id={{$vo.id}}">{{$vo['chengyu']}}</a>
+						</li>
+						{{/volist}}
+					</ul>
+				</div>
+				
+				<div class="wd_content l-fr">
+					<div class="wd_top">
+						<div class="wd_name l-fl">
+							<input type="hidden" id="id" value="{{$chengyu['ID']}}">
+							<input type="hidden" id="pinyin" value="{{$chengyu['SPingYin']}}">
+							<p>{{$chengyu['PingYin']}}</p>
+							<h3>{{$chengyu['ChengYu']}}</h3>
+						</div>
+						<div class="wd_shoucang" id="wd_sh" onclick="collect()">
+							<input type="hidden" class="exist" value="{{$exist}}"/>
+							{{if $exist}}
+							<img id="wd_img2" src="__IMG__/shoucang-page.png" alt="" title="收藏成功"/>
+							{{else /}}
+							<img id="wd_img1" src="__IMG__/wd_shoucang.png" alt="" title="添加收藏"/>
+							{{/if}}
+						</div>
+					</div>
+					<div class="wd_detail">
+						<div class="wd_explain wd_det">
+							<h5>成语解释</h5>
+							<p>{{$chengyu['DianGu']}}</p>
+						</div>
+						<div class="wd_from wd_det">
+							<h5>成语出处</h5>
+							<p>{{$chengyu['ChuChu']}}</p>
+						</div>
+						<div class="wd_others wd_det">
+							<h5>例子</h5>
+							<p>{{$chengyu['LiZi']}}</p>
+						</div>
+					</div>
+					
+					
+				</div>
+				
+				<script type="text/javascript">
+					function collect(){
+						var id = $('#id').val();
+						var pinyin = $('#pinyin').val();
+						var exist = $('.exist').val();
+						if(exist==1){
+							$.ajax({
+								url:'/thinkphpcy/index/index/collect_del',
+								type:'post',
+								datatype:'json',
+								data:{id:id,pinyin:pinyin},
+								error: function(XMLHttpRequest, textStatus, errorThrown) {
+									alert(XMLHttpRequest.status);
+									alert(XMLHttpRequest.readyState);
+									alert(textStatus);
+								}, 
+								success:function(data){
+									if(data){
+										window.location.reload();
+									}else{
+										alert('操作失败');
+									}
+								}
+							});
+						}else{
+							$.ajax({
+								url:'/thinkphpcy/index/index/collect',
+								type:'post',
+								datatype:'json',
+								data:{id:id,pinyin:pinyin},
+								error: function(XMLHttpRequest, textStatus, errorThrown) {
+									alert(XMLHttpRequest.status);
+									alert(XMLHttpRequest.readyState);
+									alert(textStatus);
+								}, 
+								success:function(data){
+									if(data){
+										window.location.reload();
+									}else{
+										alert('操作失败');
+									}
+								}
+							});
+						}
+						
+						
+					}
+				</script>
+				
+			</div>
+			<!--wd main end-->
+		</div>
+		<!--sl-main content end-->
+		
+		
+		
+	</body>
+</html>

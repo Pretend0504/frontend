@@ -1,0 +1,13 @@
+<link rel="stylesheet" type="text/css" href="__CSS__/admin.css"/>
+<div class="cyupdate">
+	<form action="__URL__/cyupdate" method="post">
+		<input type="hidden" name="id" value="{{$cyxx.ID}}">
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;成语：<input type="text" name="chengyu" value="{{$cyxx.ChengYu}}"/></p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;拼音：<input type="text" name="pinyin" value="{{$cyxx.PingYin}}" /></p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;成语解释：<input type="text" name="jieshi" value="{{$cyxx.DianGu}}" autocomplete="off"/></p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;成语出处：<input type="text" name="chuchu" value="{{$cyxx.ChuChu}}" autocomplete="off"/></p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;成语例子：<input type="text" name="lizi" value="{{$cyxx.LiZi}}" autocomplete="off"/></p>
+		<p>成语首字母：<input type="text" name="shouzimu" value="{{$cyxx.SPingYin}}"/></p>
+		<input type="submit" value="修改" class="admin_submit"/>
+	</form>
+</div>

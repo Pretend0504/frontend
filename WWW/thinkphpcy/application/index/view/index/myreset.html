@@ -1,0 +1,168 @@
+{{include file="public/header_index" /}}
+			
+			<div class="my_content l-fr">
+				<div class="my_detail">
+					<div class="mytop">
+						<div class="mytop-img l-fl" onclick="changePic()">
+							<img src="/thinkphpcy/static/uploads/head/{{$info.head}}" alt="" />
+						</div>
+						<div class="mytop-reset l-fl">
+							<input type="text" name="" id="" value="{{$info.user}}"/>
+							<button onclick="changePic()">编辑头像</button>
+						</div>
+						<div class="mytop_pic l-fr" id="changepic">
+							<form action="/thinkphpcy/index/user/head" method="post" enctype="multipart/form-data">
+								<!--<p>更改头像:-->
+								<input type="file" name="file" required="required" class="file_sumit">
+								<!--</p>-->
+								<input type="submit" value="上传" class="pic_submit"/>
+							</form>
+						</div>
+						
+					</div>
+					<div class="mymiddle">
+						<ul class="mymiddle-reset">
+							<li>
+								<div class="mima" id="password" onclick="showReset()">
+									<p>修改密码</p>
+									<img src="__IMG__/irow-black.png" alt="" />
+								</div>
+								<div class="my-hidden" id="mymiddle-hidden">
+									<form action="">
+										<p>请输入新密码:<input type="password" name="" id="pwd1" required="required"></p>
+										<p>请确认密码密码:<input type="password" name="" id="pwd2" required="required"/></p>
+										<input type="button" value="保存" class="mysubmit" onclick="changepwd()">
+									</form>
+								</div>
+							</li>
+									
+							<!--<li>
+								<div class="mima" id="password">
+									<p>学习记录</p>
+									<img src="__IMG__/irow-black.png" alt="" />
+								</div>
+								<div class="my-hidden" id="mymiddle-hidden">
+									<form action="">
+										<p>请输入新密码:<input type="password" name="" id="" required="required"></p>
+										<p>请确认密码密码:<input type="password" name="" id="" required="required"/></p>
+										<input type="submit" value="保存" class="mysubmit" onclick="passReset()">
+									</form>
+								</div>
+							</li>-->
+							<li>
+								<div class="mima" id="password" onclick="showAbo()">
+									<p>关于</p>
+									<img src="__IMG__/irow-black.png" alt="" />
+								</div>
+								<div class="my-hidden" id="about-hidden">
+									<p>本系统是一款专门正对小学生成语学习而设计的学习系统，里面综合了小学生的学习习惯和学习兴趣，学生、家长都爱用！</p>
+								</div>
+							</li>
+							<li>
+								<div class="mima" id="password" onclick="showLea1()">
+									<p>反馈</p>
+									<img src="__IMG__/irow-black.png" alt="" />
+								</div>
+								<div class="my-hidden" id="lea-hide">
+									<form action="/thinkphpcy/index/user/feedback" method="post">
+										<p>您的姓名:<input type="text" name="name" id="" required="required"></p>
+										<p>联系方式:<input type="text" name="contact" id="" required="required"/></p>
+										<p>留言反馈：<textarea name="content" rows="4" cols="20"></textarea></p>
+										<input type="submit" value="提交" class="mysubmit">
+									</form>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+			<!--sl main end-->
+		<script>
+			function changepwd(){
+				var pwd1 = $('#pwd1').val();
+				var pwd2 = $('#pwd2').val();
+				$.ajax({
+					url:'/thinkphpcy/index/user/change_password',
+					type:'post',
+					datatype:'json',
+					data:{pwd1:pwd1,pwd2:pwd2},
+					error: function(XMLHttpRequest, textStatus, errorThrown) {
+						alert(XMLHttpRequest.status);
+						alert(XMLHttpRequest.readyState);
+						alert(textStatus);
+					}, 
+					success: function(data){
+						if(data.code==4){
+							alert('修改成功,请重新登陆');
+							window.location = '/thinkphpcy/index/user/login';
+						}else{
+							alert(data.info);
+						}
+					}
+				});
+			}
+			
+		</script>
+		<script type="text/javascript">
+			var hide = document.getElementById("mymiddle-hidden");
+			var leah = document.getElementById("lea-hide");
+			var aboh = document.getElementById("about-hidden");
+			var cli1 = 1;
+			var cli3 = 1;
+			var cli4 = 1; 
+			var chpic = document.getElementById("changepic");
+			var clicPic = 1;
+//			function showReset(){
+//				if(cli1%2 != 0){
+//					hide.style.display = "block";
+//				}
+//				else{
+//					hide.style.display = "none";
+//				}
+//				cli1 = cli1 + 1;
+//			};
+			function changePic(){
+				if(clicPic %2 != 0){
+					chpic.style.display = "block";
+					clicPic += 1;
+				}
+				else if(clicPic %2 == 0){
+					chpic.style.display = "none";
+					clicPic += 1;
+				}
+				
+			}
+			function showAbo(){
+				if(cli3%2 != 0){
+					aboh.style.display = "block";
+				}
+				else{
+					aboh.style.display = "none";
+				}
+				cli3 = cli3 + 1;
+			}
+			function showLea1(){
+				if(cli4%2 != 0){
+					leah.style.display = "block";
+				}
+				else{
+					leah.style.display = "none";
+				}
+				cli4 = cli4 + 1;
+			}
+			function showReset(){
+				if(cli1%2 != 0){
+					hide.style.display = "block";
+				}
+				else{
+					hide.style.display = "none";
+				}
+				cli1 = cli1 + 1;
+			};
+		
+		</script>
+		
+	</body>
+</html>

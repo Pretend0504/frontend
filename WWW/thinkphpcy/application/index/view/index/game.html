@@ -1,0 +1,162 @@
+{{include file="public/header_index" /}}
+			
+			<!--sl main start-->
+			<div class="sl_search">
+				<form  action="__URL__/mhcx" method="post">
+					<input class="text_search" type="search" name="search" id="search" value="" placeholder="成语搜索 支持模糊查询"/>
+					<input class="img_search" type="image" src="__IMG__/search.png" alt="Submit" />
+				</form>
+				<!--<div class="sl_title game_top">
+					<p>成语接龙</p>
+					<button onclick="ngame()" id="game-restart">重新开始</button>
+					<button onclick="startGame()" id="game-start">开始游戏</button>
+				</div>-->
+			</div>
+			
+			<div class="game_detail" id="game">
+				
+				<div class="game_left">
+					<div class="sl_title game_top">
+					<p>成语接龙</p>
+					<button onclick="ngame()" id="game-restart">重新开始</button>
+					<button onclick="startGame()" id="game-start">开始游戏</button>
+				</div>
+					<div class="game_first" id="game-content">
+						<p><span id="first">{{$first}}</span><a onclick="huan()" id="game-change">换一个</a></p>
+						<form action="">
+							<input type="text" id="daan" placeholder="输入你的答案" required="required" maxlength="4"/>
+							<span>(限4个字)</span>
+						</form>
+						<div class="game_submit_tip">
+							<p onclick="disa()"><input type="button" value="提交答案" class="game_submit" id="game-submit" onclick="submit()"/></p>
+							<button href="" onclick="gameTip()"><img src="__IMG__/tip.png" alt="" />提示</button>
+						</div>
+						<div class="game_tip_content">
+							<div class="game_tip" id="game-tip">
+								<ul>
+						
+								</ul>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<div class="game_right">
+					<p>推荐学习</p>
+					<ul class="game_intro">
+						{{volist name="data" id="vo"}}
+						<li><a href="__URL__/word_detail?id={{$vo.id}}">{{$vo.chengyu}}</a></li>
+						{{/volist}}	
+					</ul>
+				</div>
+			</div>
+			
+			
+				
+		</div>
+			<!--sl main end-->
+	
+		<!--sl-main content end-->
+		
+			<!--<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>-->
+		<script>
+			function huan(){
+				var type = 1;
+				$.ajax({
+					url:'/thinkphpcy/index/index/gamek',
+					type:'post',
+					datatype:'json',
+					data:{type:type},
+					error: function(XMLHttpRequest, textStatus, errorThrown) {
+						
+					}, 
+					success: function(data){
+						$('#first').text(data);
+					}
+				});
+			}
+			
+			function submit(){
+			var wt = $('#first').text();
+			var da = $('#daan').val();
+			var type = 2;
+			var kong = '';
+				$.ajax({
+					url:'/thinkphpcy/index/index/gamek',
+					type:'post',
+					datatype:'json',
+					data:{wt:wt,da:da,type:type},
+					error: function(XMLHttpRequest, textStatus, errorThrown) {
+						alert(XMLHttpRequest.status);
+						alert(XMLHttpRequest.readyState);
+						alert(textStatus);
+					}, 
+					success: function(data){
+						if(data.code == 3 || data.code == 2){
+							alert(data.info);
+						}
+						
+						
+						if(data){
+							$('#first').text(data.xcy);
+							$('#daan').val(kong);
+						}
+					}
+				});
+			}
+			
+			function gameTip(){
+				var wt = $('#first').text();
+				var type = 3;
+				var text = '';
+				$.ajax({
+					url:'/thinkphpcy/index/index/gamek',
+					type:'post',
+					datatype:'json',
+					data:{wt:wt,type:type},
+					error: function(XMLHttpRequest, textStatus, errorThrown) {
+						alert(XMLHttpRequest.status);
+						alert(XMLHttpRequest.readyState);
+						alert(textStatus);
+					}, 
+					success: function(data){
+							for(x in data){
+								text = text +'<li>'+data[x]['ChengYu']+'</li>';
+							}
+						$('#game-tip').css('display','block');
+						$('#game-tip ul').html(text);
+					}
+				});
+			}
+			
+			function ngame(){
+				window.location.reload();
+			}
+		</script>
+		<script type="text/javascript">
+			var gcon = document.getElementById("game-content");
+			var gs = document.getElementById("game-start");
+			var gr = document.getElementById("game-restart");
+			var gc = document.getElementById("game-change");
+			var gsub = document.getElementById("game-submit");
+//			var gt = document.getElementById("game-");
+			var gt = document.getElementById("game-tip");
+			function startGame(){
+				gs.style.display = "none";
+				gr.style.display = "block";
+				gcon.style.display = "block";
+				gc.style.display = "inline-block";
+			}
+			function disa(){
+				gc.style.display = "none";
+			}
+//          点击提交按钮之后上面的换一个的按钮要消失或者禁用  未实现？？？
+//			function gameTip(){ 
+//				gt.style.display = "block";
+//			} 
+			
+		</script>
+	
+		
+	</body>
+</html>

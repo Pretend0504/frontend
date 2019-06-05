@@ -1,0 +1,10 @@
+
+<link rel="stylesheet" type="text/css" href="__CSS__/admin.css"/>
+<div class="cyupdate">
+	<form action="__URL__/tmupdate" method="post">
+		<input type="hidden" name="id" value="{{$tmxx.id}}">
+		<p>题目：<input type="text" name="question" value="{{$tmxx.question}}"/></p>
+		<p>答案：<input type="text" name="answer" value="{{$tmxx.answer}}" /></p>
+		<input type="submit" value="修改" class="admin_submit" />
+	</form>
+</div>

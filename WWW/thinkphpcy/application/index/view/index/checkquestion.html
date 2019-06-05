@@ -1,0 +1,134 @@
+{{include file="public/header_index" /}}
+			
+			<!--sl main start-->
+			
+			<div class="sl_search" style="height:auto;padding-bottom: 50px;">
+				<div class="check-question">
+					<form action="__URL__/checkquestion" method="post">
+					{{volist name="jieguo" id="v"}}
+						<div><p>问题{{$i}}：{{$v.question}}</p></div>
+						<div><p>正确答案：{{$v.answer}}</p></div>
+						<div><p>你的答案：{{$v.answer2}}</p></div>
+						{{if $v.pd}}
+							<div class="test_end"><p>恭喜你，答对了</p></div>
+						{{else /}}
+							<div class="test_end"><p>哎呀，又错了啦</p></div>
+						{{/if}}
+					{{/volist}}
+						
+						
+					</form>
+					<div class="total">
+						<p>你一共答对{{$j}}道题，{{if $j==1}}革命尚未成功，同志还需努力！{{elseif $j==2}}加油，离成功还有一步之遥！
+							{{elseif $j==3}}真棒，天才冠军就是你！{{else}}不会是睡着了吧{{/if}}</p>
+						<p><a href="__URL__/question">再来一次</a></p>
+					</div>
+					
+				</div>
+			</div>
+				
+		
+			<!--sl main end-->
+	
+		<!--sl-main content end-->
+		
+			<!--<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>-->
+		<script>
+			function huan(){
+				var type = 1;
+				$.ajax({
+					url:'/thinkphpcy/index/index/gamek',
+					type:'post',
+					datatype:'json',
+					data:{type:type},
+					error: function(XMLHttpRequest, textStatus, errorThrown) {
+						alert(XMLHttpRequest.status);
+						alert(XMLHttpRequest.readyState);
+						alert(textStatus);
+					}, 
+					success: function(data){
+						$('#first').text(data);
+					}
+				});
+			}
+			
+			function submit(){
+			var wt = $('#first').text();
+			var da = $('#daan').val();
+			var type = 2;
+			var kong = '';
+				$.ajax({
+					url:'/thinkphpcy/index/index/gamek',
+					type:'post',
+					datatype:'json',
+					data:{wt:wt,da:da,type:type},
+					error: function(XMLHttpRequest, textStatus, errorThrown) {
+						alert(XMLHttpRequest.status);
+						alert(XMLHttpRequest.readyState);
+						alert(textStatus);
+					}, 
+					success: function(data){
+						alert(data.info);
+						if(data){
+							$('#first').text(data.xcy);
+							$('#daan').val(kong);
+						}
+					}
+				});
+			}
+			
+			function gameTip(){
+				var wt = $('#first').text();
+				var type = 3;
+				var text = '';
+				$.ajax({
+					url:'/thinkphpcy/index/index/gamek',
+					type:'post',
+					datatype:'json',
+					data:{wt:wt,type:type},
+					error: function(XMLHttpRequest, textStatus, errorThrown) {
+						alert(XMLHttpRequest.status);
+						alert(XMLHttpRequest.readyState);
+						alert(textStatus);
+					}, 
+					success: function(data){
+							for(x in data){
+								text = text +'<li>'+data[x]['ChengYu']+'</li>';
+							}
+						$('#game-tip').css('display','block');
+						$('#game-tip ul').html(text);
+					}
+				});
+			}
+			
+			function ngame(){
+				window.location.reload();
+			}
+		</script>
+		<script type="text/javascript">
+			var gcon = document.getElementById("game-content");
+			var gs = document.getElementById("game-start");
+			var gr = document.getElementById("game-restart");
+			var gc = document.getElementById("game-change");
+			var gsub = document.getElementById("game-submit");
+//			var gt = document.getElementById("game-");
+			var gt = document.getElementById("game-tip");
+			function startGame(){
+				gs.style.display = "none";
+				gr.style.display = "block";
+				gcon.style.display = "block";
+				gc.style.display = "inline-block";
+			}
+//			function submit(){
+//				gc.style.display = "none";
+//			}
+//          点击提交按钮之后上面的换一个的按钮要消失或者禁用  未实现？？？
+			<!-- function gameTip(){ -->
+				<!-- gt.style.display = "block"; -->
+			<!-- } -->
+			
+		</script>
+	
+		
+	</body>
+</html>
